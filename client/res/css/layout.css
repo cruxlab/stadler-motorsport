@@ -1,0 +1,30 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    *behavior: url(../js/boxsizing.htc);
+}
+
+body {
+    font-size: 0.8em;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1125px;
+    margin: 0 auto;
+    overflow: hidden;
+    overflow-x: auto;
+    border: dotted #000000;
+    border-width:   1px;
+}
+
+.header {
+    border: dotted #000000;
+    border-width: 1px;
+}
+
+.l-features {
+    height: 480px;
+}

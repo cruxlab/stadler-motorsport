@@ -1,0 +1,46 @@
+.navi-show.ng-hide-add, .navi-show.ng-hide-remove {
+    -webkit-transition-property: all;
+    -webkit-transition-timing-function: ease-out-cubic;
+    -webkit-transition-duration: 400ms;
+    display: block!important;
+}
+.navi-show.ng-hide-add,
+.navi-show.ng-hide-remove.ng-hide-remove-active{
+    -webkit-transform:translateX(0px) scale(1);
+}
+
+.navi-show.ng-hide.ng-hide-add-active,
+.navi-show.ng-hide-remove{
+    -webkit-transform:translateX(-1000px) scale(0);
+}
+
+.navi-show:nth-child(0){
+    -webkit-transition-delay: 0ms;
+}
+.navi-show:nth-child(1){
+    -webkit-transition-delay: 20ms;
+}
+.navi-show:nth-child(2){
+    -webkit-transition-delay: 40ms;
+}
+
+
+.features.ng-move,
+.features.ng-enter,
+.features.ng-leave {
+    -webkit-transition-property: all;
+    -webkit-transition-timing-function: ease-out-cubic;
+    -webkit-transition-duration: 500ms;
+}
+
+.features.ng-leave.ng-leave-active,
+.features.ng-move,
+.features.ng-enter {
+    -webkit-transform:translateY(500px) translateX(0px);
+}
+
+.features.ng-leave,
+.features.ng-move.ng-move-active,
+.features.ng-enter.ng-enter-active {
+    -webkit-transform:translateX(0px);
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="stadler-motorsport">
+<head>
+    <title>stadler-motorsport</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" />
+
+    <link rel="stylesheet" href="res/css/cssreset.css" type="text/css"/>
+    <link rel="stylesheet" href="res/css/layout.css" type="text/css"/>
+    <link rel="stylesheet" href="res/css/module.css" type="text/css"/>
+    <link rel="stylesheet" href="res/css/state.css" type="text/css"/>
+
+    <script type="text/javascript" src="res/js/angular.min.js"></script>
+    <script type="text/javascript" src="res/js/angular-cookies.min.js"></script>
+    <script type="text/javascript" src="res/js/angular-animate.min.js"></script>
+    <script type="text/javascript" src="res/js/angular-resource.min.js"></script>
+    <script type="text/javascript" src="res/js/angular-ui-router.js"></script>
+    <script type="text/javascript" src="res/js/underscore-min.js"></script>
+    <script type="text/javascript" src="res/js/app.js"></script>
+    <script type="text/javascript" src="res/js/controller.js"></script>
+    <script type="text/javascript" src="res/js/services.js"></script>
+    <script type="text/javascript" src="res/js/filter.js"></script>
+    <script type="text/javascript" src="res/js/routingConfig.js"></script>
+    <script type="text/javascript" src="res/js/directives.js"></script>
+
+    <script type="text/javascript">
+        if (window.location.href.indexOf('#_=_') > 0) {
+            window.location = window.location.href.replace(/#.*/, '');
+        }
+    </script>
+
+</head>
+<body ng-controller="MainCtrl">
+<div class="container">
+    This is the container
+    <input type="button" ng-click="toggle()" value="toggle menu">
+    <div class="header" ui-view="header-ui">
+        <img src="http://placehold.it/120x51">
+        <!--<img src="http://placehold.it/175x175">-->
+        <!--<img src="http://placehold.it/175x175">-->
+        <!--<ul  class="m-unstyled" ng-show="toggleNavigation">-->
+            <!--<li ng-repeat="menuitem in menuitems"><a href="/{{menuitem.title}}">{{menuitem.title}}</a></li>-->
+        <!--</ul>-->
+    </div>
+    <div class="content" ui-view="content-ui"></div>
+    <div class="footer"></div>
+</div>
+</body>
+</html>
