@@ -22,8 +22,8 @@ angular.module('stadler-motorsport', ['ngAnimate', 'ui.router', 'app.ctrl', 'app
                                      controller: 'NavCtrl'}
                 }
             })
-            .state('/Portfolio',{
-                url: '/Portfolio',
+            .state('/portfolio',{
+                url: '/portfolio',
                 views: {
                     'content-ui': {templateUrl: '/res/partials/portfolio.html',
                                    controller: 'FeatCtrl'},

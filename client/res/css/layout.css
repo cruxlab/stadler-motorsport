@@ -6,9 +6,15 @@
 }
 
 body {
-    font-size: 0.8em;
+    font: normal 1em Helvetica, Sans-Serif;
+    font-size: 1em;
     padding: 0;
     margin: 0;
+}
+
+header {
+    /*border: dotted #000000;*/
+    /*border-width: 1px;*/
 }
 
 .container {
@@ -16,15 +22,18 @@ body {
     margin: 0 auto;
     overflow: hidden;
     overflow-x: auto;
-    border: dotted #000000;
-    border-width:   1px;
-}
-
-.header {
-    border: dotted #000000;
-    border-width: 1px;
+    /*border: dotted #000000;*/
+    /*border-width:   1px;*/
 }
 
 .l-features {
     height: 480px;
+}
+
+.l-navigation {
+}
+
+.logo {
+    width: 100%;
+    display: block;
 }

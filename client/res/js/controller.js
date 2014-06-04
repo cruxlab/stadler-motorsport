@@ -11,7 +11,6 @@ angular.module('app.ctrl', [])
 
     .controller('MainCtrl', function($scope, $log, $http, $location, Auth){
         $log.log('MainCtrl invocation');
-        var toggleNavigation = false;
         $http.get('/menuitems').success(function(data){
             console.log(data);
             $scope.menuitems = data;
@@ -19,19 +18,10 @@ angular.module('app.ctrl', [])
             .error(function(error){
 
             });
-        $scope.toggle = function(){
-            $log.log('NavCtrl toggleNavigation');
-            $scope.$broadcast('toggle', toggleNavigation = !toggleNavigation);
-        };
 
     })
     .controller('NavCtrl', function($scope, $log, $http, $location){
         $log.log('NavCtrl invocation');
-        $scope.$on('toggle', function(event, data){
-        $scope.toggleNavigation = data;
-        });
-
-
     })
     .controller('FeatCtrl', function($scope, $log, $http, $location){
         $log.log('FeatCtrl invocation');
@@ -40,7 +30,5 @@ angular.module('app.ctrl', [])
             $scope.features = data;
         })
             .error(function(error){
-
             });
-
     });

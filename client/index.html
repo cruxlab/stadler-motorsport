@@ -22,6 +22,7 @@
     <script type="text/javascript" src="res/js/filter.js"></script>
     <script type="text/javascript" src="res/js/routingConfig.js"></script>
     <script type="text/javascript" src="res/js/directives.js"></script>
+    <script type="text/javascript" src="res/js/snap.svg-min.js"></script>
 
     <script type="text/javascript">
         if (window.location.href.indexOf('#_=_') > 0) {
@@ -32,16 +33,9 @@
 </head>
 <body ng-controller="MainCtrl">
 <div class="container">
-    This is the container
-    <input type="button" ng-click="toggle()" value="toggle menu">
-    <div class="header" ui-view="header-ui">
+    <header class="header" ui-view="header-ui">
         <img src="http://placehold.it/120x51">
-        <!--<img src="http://placehold.it/175x175">-->
-        <!--<img src="http://placehold.it/175x175">-->
-        <!--<ul  class="m-unstyled" ng-show="toggleNavigation">-->
-            <!--<li ng-repeat="menuitem in menuitems"><a href="/{{menuitem.title}}">{{menuitem.title}}</a></li>-->
-        <!--</ul>-->
-    </div>
+    </header>
     <div class="content" ui-view="content-ui"></div>
     <div class="footer"></div>
 </div>
