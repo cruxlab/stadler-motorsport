@@ -15,6 +15,16 @@ body {
 header {
     /*border: dotted #000000;*/
     /*border-width: 1px;*/
+    position: fixed;
+    height: 216px;
+    /*overflow-y: hidden;*/
+    /*background: rgb(114, 114, 114); *//* fallback color */
+    /*background: rgba(114, 114, 114, 1);*/
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 .container {
@@ -26,6 +36,10 @@ header {
     /*border-width:   1px;*/
 }
 
+.l-content {
+    padding-top: 216px;
+}
+
 .l-features {
     height: 480px;
 }
@@ -33,7 +47,7 @@ header {
 .l-navigation {
 }
 
-.logo {
+#logo {
     width: 100%;
     display: block;
 }

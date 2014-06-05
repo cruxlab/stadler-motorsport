@@ -7,7 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 angular.module('app.directives', [])
-    .directive('transDelay', ['$timeout', function($timeout) {
+        .directive('transDelay', ['$timeout', function($timeout) {
         var index = 0;
         return {
             restrict: 'A',
@@ -94,4 +94,24 @@ angular.module('app.directives', [])
                 });
             }
         };
+    }])
+    .directive('scroll', ['$window', function($window){
+        return {
+            restrict: 'A',
+            link: function($scope, element, attrs){
+                angular.element($window).bind('scroll', function(){
+                    if(this.pageYOffset >= 400){
+                        console.log('scrolled below header');
+                        angular.element(document.getElementById('header')).addClass('isShrinked');
+                        angular.element(document.getElementById('logo')).addClass('isShrinked');
+                        angular.element(document.getElementsByClassName('m-image-container')).addClass('isShrinked');
+                    } else {
+                        console.log('header is in view');
+                        angular.element(document.getElementById('header')).removeClass('isShrinked');
+                        angular.element(document.getElementById('logo')).removeClass('isShrinked');
+                        angular.element(document.getElementsByClassName('m-image-container')).removeClass('isShrinked');
+                    }
+                })
+            }
+        }
     }]);

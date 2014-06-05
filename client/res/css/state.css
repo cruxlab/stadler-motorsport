@@ -44,3 +44,20 @@
 .features.ng-enter.ng-enter-active {
     -webkit-transform:translateX(0px);
 }
+
+header.isShrinked {
+    position: fixed;
+    height: 50px;
+}
+header.isShrinked h2 {
+    top: 0%;
+    width: 100%;
+    text-align: center;
+    background: rgba(255, 0, 0, 0.7);
+}
+header.isShrinked h2 > span {
+    background: rgba(255, 0, 0, 0);
+}
+.m-image-container.isShrinked {
+    height: 50px;
+}
