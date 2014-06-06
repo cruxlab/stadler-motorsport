@@ -102,16 +102,24 @@ angular.module('app.directives', [])
                 angular.element($window).bind('scroll', function(){
                     if(this.pageYOffset >= 400){
                         console.log('scrolled below header');
-                        angular.element(document.getElementById('header')).addClass('isShrinked');
-                        angular.element(document.getElementById('logo')).addClass('isShrinked');
-                        angular.element(document.getElementsByClassName('m-image-container')).addClass('isShrinked');
+                        angular.element(document.querySelector('#header')).addClass('isShrinked');
+                        angular.element(document.querySelector('#logo')).addClass('isShrinked');
+                        angular.element(document.querySelector('.m-image-container')).addClass('isShrinked');
                     } else {
                         console.log('header is in view');
-                        angular.element(document.getElementById('header')).removeClass('isShrinked');
-                        angular.element(document.getElementById('logo')).removeClass('isShrinked');
-                        angular.element(document.getElementsByClassName('m-image-container')).removeClass('isShrinked');
+                        angular.element(document.querySelector('#header')).removeClass('isShrinked');
+                        angular.element(document.querySelector('#logo')).removeClass('isShrinked');
+                        angular.element(document.querySelector('.m-image-container')).removeClass('isShrinked');
                     }
                 })
+            }
+        }
+    }])
+    .directive('content', [function(){
+        return {
+            restrict: 'A',
+            link: function($scope, element, attrs){
+                element.css('paddingTop', document.getElementById('logo-container').clientHeight+'px');
             }
         }
     }]);

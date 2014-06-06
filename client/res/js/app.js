@@ -17,18 +17,18 @@ angular.module('stadler-motorsport', ['ngAnimate', 'ui.router', 'app.ctrl', 'app
             .state('/', {
                 url: '/',
                 views: {
-                    'content-ui':   {templateUrl: '/res/partials/main.html'},
-                    'header-ui':    {templateUrl: '/res/partials/navigation.html',
-                                     controller: 'NavCtrl'}
+                    'content-ui':   {templateUrl: '/res/partials/main.html'}
+//                    'header-ui':    {templateUrl: '/res/partials/navigation.html',
+//                                     controller: 'NavCtrl'}
                 }
             })
             .state('/portfolio',{
                 url: '/portfolio',
                 views: {
                     'content-ui': {templateUrl: '/res/partials/portfolio.html',
-                                   controller: 'FeatCtrl'},
-                    'header-ui':    {templateUrl: '/res/partials/navigation.html',
-                        controller: 'NavCtrl'}
+                                   controller: 'FeatCtrl'}
+//                    'header-ui':    {templateUrl: '/res/partials/navigation.html',
+//                        controller: 'NavCtrl'}
                 }
             })
             .state('404', {

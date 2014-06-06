@@ -16,7 +16,7 @@ header {
     /*border: dotted #000000;*/
     /*border-width: 1px;*/
     position: fixed;
-    height: 216px;
+    /*height: 216px;*/
     /*overflow-y: hidden;*/
     /*background: rgb(114, 114, 114); *//* fallback color */
     /*background: rgba(114, 114, 114, 1);*/
@@ -37,7 +37,7 @@ header {
 }
 
 .l-content {
-    padding-top: 216px;
+    /*padding-top: 216px;*/
 }
 
 .l-features {
