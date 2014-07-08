@@ -95,7 +95,7 @@ angular.module('app.directives', [])
             }
         };
     }])
-    .directive('scroll', ['$window', function($window){
+    .directive('scroll', ['$window', '$state', function($window, $state){
         return {
             restrict: 'A',
             link: function($scope, element, attrs){
@@ -105,7 +105,7 @@ angular.module('app.directives', [])
                         angular.element(document.querySelector('#header')).addClass('isShrinked');
                         angular.element(document.querySelector('#logo')).addClass('isShrinked');
                         angular.element(document.querySelector('.m-image-container')).addClass('isShrinked');
-                    } else {
+                    } else if(this.pageYOffset <= 400 && $state.current.name === '/'){
                         console.log('header is in view');
                         angular.element(document.querySelector('#header')).removeClass('isShrinked');
                         angular.element(document.querySelector('#logo')).removeClass('isShrinked');
