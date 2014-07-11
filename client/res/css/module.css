@@ -30,6 +30,7 @@
 
 .m-features-list-unstyled {
     list-style-type: none;
+    display: block;
 }
 
 .m-features-list-mobile {
@@ -39,10 +40,11 @@
 
 .m-features-listitems-mobile{
     position: relative;
-    float: left;
+    /*float: left;*/
     padding: 1px;
-    width: 50%;
-    z-index: 20;
+    /*width: 50%;*/
+    text-align: justify;
+    /*z-index: 20;*/
 }
 
 .m-features-listitems-mobile img {

@@ -16,6 +16,7 @@ header {
     /*border: dotted #000000;*/
     /*border-width: 1px;*/
     position: fixed;
+    z-index: 1000;
     /*height: 216px;*/
     /*overflow-y: hidden;*/
     /*background: rgb(114, 114, 114); *//* fallback color */
@@ -41,7 +42,7 @@ header {
 }
 
 .l-features {
-    height: 480px;
+    /*height: 480px;*/
 }
 
 .l-navigation {

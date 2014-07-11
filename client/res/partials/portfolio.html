@@ -1,6 +1,6 @@
 <div class="l-features">
-    <!--<input type="search" ng-model="search" placeholder="filter ..." />-->
     <ul class="m-features-list-mobile m-features-list-unstyled">
-        <li class="m-features-listitems-mobile features" style="-webkit-transition-delay:{{$index * 100}}ms;" ng-repeat="feature in features | filter:search"><img src="{{feature.img}}"></li>
+        <li class="m-features-listitems-mobile features" ng-repeat="feature in features | orderBy:-title"><h2>{{feature.title}}</h2><p>{{feature.text}}</p></li>
+        <!--<li class="m-features-listitems-mobile features" style="-webkit-transition-delay:{{$index * 100}}ms;" ng-repeat="feature in features | orderBy:-title"><p>{{feature.title}}"></p></li>-->
     </ul>
 </div>
