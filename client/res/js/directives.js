@@ -122,4 +122,21 @@ angular.module('app.directives', [])
                 element.css('paddingTop', document.getElementById('logo-container').clientHeight+'px');
             }
         }
+    }])
+    .directive('flipper', [function(){
+        return {
+            restrict: 'C',
+            link: function($scope, element, attrs){
+//                $scope.toggleFlip = false;
+//                element.bind('touchstart', function(){
+//                    $scope.toggleFlip = !$scope.toggleFlip;
+//                    $scope.$apply($scope.toggleFlip);
+//                    console.log($scope.toggleFlip);
+//                });
+                element.bind('click', function(){
+                    angular.element(element).toggleClass('flip');
+                    console.log('flip');
+                });
+            }
+        }
     }]);

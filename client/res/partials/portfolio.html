@@ -5,9 +5,10 @@
     <!--</ul>-->
     <div class="flipper-container">
         <div class="flipper" ng-repeat="feature in features | orderBy:-title">
-            <div class="front">
+            <div class="front" >
                 <!-- front content -->
-                <h2>{{feature.title}}</h2>
+                <h2><span class="flipper">{{feature.title}}</span></h2>
+                <img ng-src="{{feature.img}}">
             </div>
             <div class="back">
                 <!-- back content -->

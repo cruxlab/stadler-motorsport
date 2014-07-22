@@ -135,7 +135,7 @@
 .flipper {
     display: block;
     position: relative;
-    margin-top: 1px;
+    margin-bottom: 1px;
     height: 100%;
     width: 100%;
     float: left;
@@ -143,12 +143,13 @@
     -webkit-transition: all .6s ease-out;
     -webkit-transform-style: preserve-3d;
     -webkit-transform: perspective(1000px);
+
 }
 
 /*.flipper-container:hover .flipper {*/
     /*-webkit-transform: rotateY(180deg);*/
 /*}*/
-.flipper:hover {
+.flipper.flip {
     -webkit-transform: rotateY(180deg);
 }
 
@@ -167,7 +168,30 @@
 }
 .front {
     background: rgba(255, 0, 0, 0.7);
-    z-index: 2;
+    /*z-index: 2;*/
+}
+
+.front > h2 {
+    position: relative;
+    top: 30px;
+}
+
+.front > h2 > span {
+    color: rgb(255, 255, 250);
+    color: rgba(255, 255, 250, 1);
+    font: normal 18px/10px Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    background: rgb(255, 0, 0);
+    background: rgba(255, 0, 0, 0.7);
+    padding: 8px;
+    width: 30px;
+    -webkit-backface-visibility: hidden;
+}
+
+.front > img {
+    padding: 0px 5px 5px 0px;
+    height: 132px;
+    margin-top: 16px;
 }
 
 .back {
