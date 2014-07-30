@@ -122,7 +122,7 @@ angular.module('app.directives', [])
 //        return {
 //            restrict: 'A',
 //            link: function($scope, element, attrs){
-//                element.css('paddingTop', document.getElementById('logo-container').clientHeight+'px');
+//                element.css('paddingTop', document.getElementById('header').clientHeight+'px');
 //            }
 //        }
 //    }])
@@ -136,8 +136,18 @@ angular.module('app.directives', [])
 //                    $scope.$apply($scope.toggleFlip);
 //                    console.log($scope.toggleFlip);
 //                });
+                var viewPortToggle = false;
                 element.bind('click', function(){
                     angular.element(element).toggleClass('flip');
+                    angular.element(document.querySelectorAll('.flipper')).toggleClass('isHidden');
+                    if(viewPortToggle === false){
+                        element.css('height', (angular.element(window.screen.height)[0]-50)+'px');
+                        viewPortToggle = true;
+                    } else if (viewPortToggle === true) {
+                        element.css('height', '160px');
+                        viewPortToggle = false;
+                    }
+                    console.log(angular.element(window.screen.height)[0]-50);
                     console.log('flip');
                 });
             }
