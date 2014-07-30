@@ -100,29 +100,32 @@ angular.module('app.directives', [])
             restrict: 'A',
             link: function($scope, element, attrs){
                 angular.element($window).bind('scroll', function(){
-                    if(this.pageYOffset >= 400){
+                    console.log(this.pageYOffset);
+                    if(this.pageYOffset >= 50){
+//                    if(this.pageYOffset >= 200){
                         console.log('scrolled below header');
                         angular.element(document.querySelector('#header')).addClass('isShrinked');
-                        angular.element(document.querySelector('#logo')).addClass('isShrinked');
-                        angular.element(document.querySelector('.m-image-container')).addClass('isShrinked');
-                    } else if(this.pageYOffset <= 400 && $state.current.name === '/'){
+                        angular.element(document.querySelector('.l-content')).addClass('isShrinked');
+                        angular.element(document.querySelector('.m-navigation')).addClass('isShrinked');
+//                    } else if(this.pageYOffset <= 50){
+                    } else if(this.pageYOffset <= 50 && $state.current.name === '/'){
                         console.log('header is in view');
                         angular.element(document.querySelector('#header')).removeClass('isShrinked');
-                        angular.element(document.querySelector('#logo')).removeClass('isShrinked');
-                        angular.element(document.querySelector('.m-image-container')).removeClass('isShrinked');
+                        angular.element(document.querySelector('.l-content')).removeClass('isShrinked');
+                        angular.element(document.querySelector('.m-navigation')).removeClass('isShrinked');
                     }
                 })
             }
         }
     }])
-    .directive('content', [function(){
-        return {
-            restrict: 'A',
-            link: function($scope, element, attrs){
-                element.css('paddingTop', document.getElementById('logo-container').clientHeight+'px');
-            }
-        }
-    }])
+//    .directive('content', [function(){
+//        return {
+//            restrict: 'A',
+//            link: function($scope, element, attrs){
+//                element.css('paddingTop', document.getElementById('logo-container').clientHeight+'px');
+//            }
+//        }
+//    }])
     .directive('flipper', [function(){
         return {
             restrict: 'C',

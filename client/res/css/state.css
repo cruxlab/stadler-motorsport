@@ -49,15 +49,19 @@ header.isShrinked {
     position: fixed;
     height: 50px;
 }
-header.isShrinked h2 {
+.l-content.isShrinked {
+    padding-top: 50px;
+}
+.m-navigation.isShrinked > h2 {
     top: 0%;
     width: 100%;
+    line-height: 50px;
     text-align: center;
     background: rgba(255, 0, 0, 0.7);
 }
-header.isShrinked h2 > span {
+.m-navigation.isShrinked > h2 > span {
     background: rgba(255, 0, 0, 0);
 }
-.m-image-container.isShrinked {
-    height: 50px;
-}
+/*.m-image-container.isShrinked {*/
+    /*height: 50px;*/
+/*}*/

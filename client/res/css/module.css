@@ -51,33 +51,38 @@
     width: 100%;
 }
 
-.m-image-container {
-    overflow-y: hidden;
-    position: relative;
-    width: 100%;
+/*.m-image-container {*/
+    /*overflow-y: hidden;*/
+    /*position: relative;*/
+    /*width: 100%;*/
     /*height: 216px;*/
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
+    /*-webkit-transition: all 0.5s;*/
+    /*-moz-transition: all 0.5s;*/
+    /*-ms-transition: all 0.5s;*/
+    /*-o-transition: all 0.5s;*/
+    /*transition: all 0.5s;*/
+/*}*/
+
+.m-navigation {
+    height: inherit;
+    background: url("../img/logo.png") center;
 }
 
-.m-image-container > h2 {
+.m-navigation > h2 {
     position: absolute;
     top: 50%;
     text-align: left;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
 }
 
-.m-image-container > h2 > span {
+.m-navigation > h2 > span {
     color: rgb(255, 255, 250);
     color: rgba(255, 255, 250, 1);
-    font: bold 24px/50px Helvetica, Sans-Serif;
+    font: bold 24px/32px Helvetica, Sans-Serif;
     letter-spacing: -1px;
     background: rgb(255, 0, 0); /* fallback color */
     background: rgba(255, 0, 0, 0.7);
@@ -135,7 +140,6 @@
 .flipper {
     display: block;
     position: relative;
-    margin-bottom: 1px;
     height: 100%;
     width: 100%;
     float: left;
@@ -160,8 +164,8 @@
 
 .front, .back {
     position: absolute;
-    top: 0;
-    left: 0;
+    /*top: 0;*/
+    /*left: 0;*/
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
@@ -198,4 +202,8 @@
     background: white;
     -webkit-transform: rotateY(180deg);
     overflow-x: hidden;
+}
+
+.back > p {
+    text-align: justify;
 }

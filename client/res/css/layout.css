@@ -17,7 +17,8 @@ header {
     /*border-width: 1px;*/
     position: fixed;
     z-index: 1000;
-    /*height: 216px;*/
+    height: 216px;
+    width: 100%;
     /*overflow-y: hidden;*/
     /*background: rgb(114, 114, 114); *//* fallback color */
     /*background: rgba(114, 114, 114, 1);*/
@@ -38,17 +39,14 @@ header {
 }
 
 .l-content {
-    /*padding-top: 216px;*/
+    padding-top: 216px;
 }
 
 .l-features {
     /*height: 480px;*/
 }
 
-.l-navigation {
-}
-
-#logo {
-    width: 100%;
-    display: block;
-}
+/*#logo {*/
+    /*width: 100%;*/
+    /*display: block;*/
+/*}*/
