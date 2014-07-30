@@ -140,14 +140,14 @@ angular.module('app.directives', [])
                 element.bind('click', function(){
                     angular.element(element).toggleClass('flip');
                     angular.element(document.querySelectorAll('.flipper')).toggleClass('isHidden');
-                    if(viewPortToggle === false){
-                        element.css('height', (angular.element(window.screen.height)[0]-50)+'px');
-                        viewPortToggle = true;
-                    } else if (viewPortToggle === true) {
-                        element.css('height', '160px');
-                        viewPortToggle = false;
-                    }
-                    console.log(angular.element(window.screen.height)[0]-50);
+//                    if(viewPortToggle === false){
+//                        element.css('height', (angular.element(window.screen.height)[0]-50)+'px');
+//                        viewPortToggle = true;
+//                    } else if (viewPortToggle === true) {
+//                        element.css('height', '160px');
+//                        viewPortToggle = false;
+//                    }
+//                    console.log(angular.element(window.screen.height)[0]-50);
                     console.log('flip');
                 });
             }
