@@ -41,6 +41,18 @@ header {
 .l-content {
     padding-top: 216px;
 }
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
 
 .l-features {
     /*height: 480px;*/

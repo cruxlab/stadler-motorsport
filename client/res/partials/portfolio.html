@@ -3,7 +3,7 @@
         <!--<li class="m-features-listitems-mobile features" ng-repeat="feature in features | orderBy:-title"><h2>{{feature.title}}</h2><p>{{feature.text}}</p></li>-->
         <!--&lt;!&ndash;<li class="m-features-listitems-mobile features" style="-webkit-transition-delay:{{$index * 100}}ms;" ng-repeat="feature in features | orderBy:-title"><p>{{feature.title}}"></p></li>&ndash;&gt;-->
     <!--</ul>-->
-    <div class="flipper-container">
+    <div class="flipper-container clearfix">
         <div class="flipper" ng-repeat="feature in features | orderBy:-title">
             <div class="front" >
                 <!-- front content -->
@@ -16,6 +16,20 @@
                 <p>{{feature.text}}</p>
                 <p>{{feature.text}}</p>
                 <p>{{feature.text}}</p>
+                <div class="m-thumb-gallery clearfix">
+                    <div class="m-thumb-gallery-wrapper">
+                    <img ng-src="http://placehold.it/100x100">
+                    <img ng-src="http://placehold.it/100x100">
+                    <img ng-src="http://placehold.it/100x100">
+                    <img ng-src="http://placehold.it/100x100">
+                    <img ng-src="http://placehold.it/100x100">
+                    <img ng-src="http://placehold.it/100x100">
+                    <img ng-src="http://placehold.it/100x100">
+                    <img ng-src="http://placehold.it/100x100">
+                    <img ng-src="http://placehold.it/100x100">
+                    <img ng-src="http://placehold.it/100x100">
+                    </div>
+                </div>
             </div>
         </div>
     </div>

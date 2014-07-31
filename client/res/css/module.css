@@ -133,7 +133,6 @@
 }
 
 .flipper-container {
-    height: 160px;
     width: 100%;
 }
 
@@ -214,4 +213,20 @@
 
 .back > p {
     text-align: justify;
+}
+
+.m-thumb-gallery {
+    height: 100px;
+    width: 100%;
+    overflow-x: hidden;
+    overflow: scroll;
+}
+
+.m-thumb-gallery-wrapper {
+    width: 1000px;
+}
+
+.m-thumb-gallery-wrapper > img {
+    /*border: 1px solid rgba(255, 0, 0, 0.7);*/
+    float: left;
 }
