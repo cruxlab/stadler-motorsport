@@ -168,6 +168,39 @@
 .flipper:nth-child(even) > .front{
     background: none;
 }
+.flipper:nth-child(odd) > .front > h2 {
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.flipper:nth-child(odd) > .front > h2 > span {
+    color: rgb(255, 0, 0);
+    color: rgba(255, 0, 0, 0.7);
+    font: normal 24px/45px Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    background: rgb(255, 255, 250); /* fallback color */
+    background: rgba(255, 255, 250, 1);
+    padding: 10px;
+    -webkit-backface-visibility: hidden;
+}
+
+.flipper:nth-child(even) > .front > h2 {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.flipper:nth-child(even) > .front > h2 > span {
+    color: rgb(255, 255, 250);
+    color: rgba(255, 255, 250, 1);
+    font: normal 24px/45px Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    background: rgb(255, 0, 0); /* fallback color */
+    background: rgba(255, 0, 0, 0.7);
+    padding: 10px;
+    -webkit-backface-visibility: hidden;
+}
 
 .front, .back {
     position: absolute;
@@ -182,23 +215,6 @@
     /*z-index: 2;*/
 }
 
-.front > h2 {
-    position: relative;
-    top: 30px;
-}
-
-.front > h2 > span {
-    color: rgb(255, 255, 250);
-    color: rgba(255, 255, 250, 1);
-    font: normal 18px/10px Helvetica, Sans-Serif;
-    letter-spacing: -1px;
-    background: rgb(255, 0, 0);
-    background: rgba(255, 0, 0, 0.7);
-    padding: 8px;
-    width: 30px;
-    -webkit-backface-visibility: hidden;
-}
-
 .front > img {
     padding: 0px 5px 5px 0px;
     height: 132px;
@@ -211,11 +227,37 @@
     overflow-x: hidden;
 }
 
+.back > h2 {
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.back > h2 > span {
+    color: rgb(255, 255, 250);
+    color: rgba(255, 255, 250, 1);
+    font: normal 24px/45px Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    background: rgb(255, 0, 0); /* fallback color */
+    background: rgba(255, 0, 0, 0.7);
+    padding: 10px;
+}
+
 .back > p {
     text-align: justify;
 }
 
+.back > p > img:nth-child(odd) {
+    float: right;
+    margin: 1em;
+}
+.back > p > img:nth-child(even) {
+    float: left;
+    margin: 1em;
+}
+
 .m-thumb-gallery {
+    margin: 1em 0em 1em 0em;
     height: 100px;
     width: 100%;
     overflow-x: hidden;

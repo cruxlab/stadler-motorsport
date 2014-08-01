@@ -19,6 +19,10 @@ angular.module('app.ctrl', [])
 
             });
 
+        $scope.toggleMenu = function(){
+            $scope.toggleNavigation = !$scope.toggleNavigation;
+        };
+
     })
     .controller('NavCtrl', function($scope, $log, $http, $location){
         $log.log('NavCtrl invocation');
