@@ -3,6 +3,13 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     *behavior: url(../js/boxsizing.htc);
+
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+}
+
+*::-webkit-scrollbar {
+    width: 0!important;
 }
 
 body {
@@ -56,6 +63,15 @@ header {
 
 .l-features {
     /*height: 480px;*/
+}
+
+.l-history {
+    height: 590px;
+}
+
+.l-history-container {
+    float: left;
+    height: inherit;
 }
 
 /*#logo {*/

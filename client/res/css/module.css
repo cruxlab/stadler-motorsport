@@ -6,12 +6,20 @@
 }
 
 .m-list-unstyled {
+    width: 100%;
+    list-style-type: none;
+}
+
+.m-list-unstyled.menu-list {
     position: absolute;
     top: 50px;
     left: 0;
     width: 100%;
     z-index: 9999;
-    list-style-type: none;
+}
+
+.m-list-unstyled.history-list {
+    height: inherit;
 }
 
 .m-listitems-mobile {
@@ -26,6 +34,16 @@
     text-decoration: none;
     color: rgb(255, 255, 250);
     color: rgba(255, 255, 250, 1);
+}
+
+.m-listitems-years {
+    list-style-type: none;
+    display: block;
+    font: bold 1em Helvetica, Sans-Serif;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    padding: 15px;
 }
 
 .m-features-list-unstyled {
@@ -132,11 +150,17 @@
     padding: 10px;
 }
 
-.flipper-container {
+.m-flipper-container {
     width: 100%;
 }
 
-.flipper {
+.m-flipper-container.history {
+    height: inherit;
+    width: 80%;
+    float: left;
+}
+
+.m-flipper {
     display: block;
     position: relative;
     height: 160px;
@@ -150,7 +174,11 @@
 
 }
 
-.flipper.isHidden {
+.m-flipper.history {
+    height: inherit;
+}
+
+.m-flipper.isHidden {
     height: 0px;
     background: none;
     display: hidden!important;
@@ -159,22 +187,22 @@
 /*.flipper-container:hover .flipper {*/
     /*-webkit-transform: rotateY(180deg);*/
 /*}*/
-.flipper.flip {
+.m-flipper.flip {
     -webkit-transform: rotateY(180deg);
     height: 590px;
 }
 
 
-.flipper:nth-child(even) > .front{
+.m-flipper:nth-child(even) > .m-flipper-front {
     background: none;
 }
-.flipper:nth-child(odd) > .front > h2 {
+.m-flipper:nth-child(odd) > .m-flipper-front > h2 {
     text-align: left;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.flipper:nth-child(odd) > .front > h2 > span {
+.m-flipper:nth-child(odd) > .m-flipper-front > h2 > span {
     color: rgb(255, 0, 0);
     color: rgba(255, 0, 0, 0.7);
     font: normal 24px/45px Helvetica, Sans-Serif;
@@ -185,13 +213,13 @@
     -webkit-backface-visibility: hidden;
 }
 
-.flipper:nth-child(even) > .front > h2 {
+.m-flipper:nth-child(even) > .m-flipper-front > h2 {
     text-align: right;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.flipper:nth-child(even) > .front > h2 > span {
+.m-flipper:nth-child(even) > .m-flipper-front > h2 > span {
     color: rgb(255, 255, 250);
     color: rgba(255, 255, 250, 1);
     font: normal 24px/45px Helvetica, Sans-Serif;
@@ -202,7 +230,7 @@
     -webkit-backface-visibility: hidden;
 }
 
-.front, .back {
+.m-flipper-front, .m-flipper-back {
     position: absolute;
     /*top: 0;*/
     /*left: 0;*/
@@ -210,30 +238,30 @@
     height: 100%;
     -webkit-backface-visibility: hidden;
 }
-.front {
+.m-flipper-front {
     background: rgba(255, 0, 0, 0.7);
     /*z-index: 2;*/
 }
 
-.front > img {
+.m-flipper-front > img {
     padding: 0px 5px 5px 0px;
     height: 132px;
     margin-top: 16px;
 }
 
-.back {
+.m-flipper-back {
     background: white;
     -webkit-transform: rotateY(180deg);
     overflow-x: hidden;
 }
 
-.back > h2 {
+.m-flipper-back > h2 {
     text-align: left;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.back > h2 > span {
+.m-flipper-back > h2 > span {
     color: rgb(255, 255, 250);
     color: rgba(255, 255, 250, 1);
     font: normal 24px/45px Helvetica, Sans-Serif;
@@ -243,15 +271,15 @@
     padding: 10px;
 }
 
-.back > p {
+.m-flipper-back > p {
     text-align: justify;
 }
 
-.back > p > img:nth-child(odd) {
+.m-flipper-back > p > img:nth-child(odd) {
     float: right;
     margin: 1em;
 }
-.back > p > img:nth-child(even) {
+.m-flipper-back > p > img:nth-child(even) {
     float: left;
     margin: 1em;
 }
@@ -271,4 +299,15 @@
 .m-thumb-gallery-wrapper > img {
     /*border: 1px solid rgba(255, 0, 0, 0.7);*/
     float: left;
+}
+
+.m-history-container {
+    height: inherit;
+}
+
+.m-history-years {
+    height: inherit;
+    width: 20%;
+    float: left;
+    overflow-y: auto;
 }

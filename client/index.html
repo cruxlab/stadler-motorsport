@@ -50,9 +50,11 @@
             <!--</div>-->
             <!--<img src="http://placehold.it/175x175">-->
             <!--<img src="http://placehold.it/175x175">-->
-            <ul class="m-list-unstyled">
+            <!--<input type="button" value="state" style="height: 20px; width:100%" ng-click="changeState()">-->
+            <ul class="m-list-unstyled menu-list">
                 <li class="m-listitems-mobile navi-show" ng-repeat="menuitem in menuitems" ng-show="toggleNavigation" >
-                    <a href="/{{menuitem.title.toLowerCase()}}">{{menuitem.title}}</a>
+                    <a href>{{menuitem.title}}</a>
+                    <!--<a href="/{{menuitem.title.toLowerCase()}}">{{menuitem.title}}</a>-->
                 </li>
             </ul>
         </div>

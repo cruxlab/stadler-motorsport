@@ -9,7 +9,7 @@
 
 angular.module('app.ctrl', [])
 
-    .controller('MainCtrl', function($scope, $log, $http, $location, Auth){
+    .controller('MainCtrl', function($scope, $log, $http, $location, Auth, $state){
         $log.log('MainCtrl invocation');
         $http.get('/menuitems').success(function(data){
             console.log(data);
@@ -23,6 +23,11 @@ angular.module('app.ctrl', [])
             $scope.toggleNavigation = !$scope.toggleNavigation;
         };
 
+//        $scope.changeState = function(){
+//            $log.log('changeState');
+//            $state.go('/portfolio');
+//        }
+
     })
     .controller('NavCtrl', function($scope, $log, $http, $location){
         $log.log('NavCtrl invocation');
@@ -35,4 +40,7 @@ angular.module('app.ctrl', [])
         })
             .error(function(error){
             });
+    })
+    .controller('HistCtrl', function($scope, $log, $http, $location){
+        $log.log('HistCtrl invocation');
     });

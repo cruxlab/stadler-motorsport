@@ -31,6 +31,13 @@ angular.module('stadler-motorsport', ['ngAnimate', 'ui.router', 'app.ctrl', 'app
 //                        controller: 'NavCtrl'}
                 }
             })
+            .state('/history',{
+                url: '/history',
+                views: {
+                    'content-ui': {templateUrl: '/res/partials/history.html',
+                                   controller: 'HistCtrl'}
+                }
+            })
             .state('404', {
                 url: '*path',
                 templateUrl: '/res/partials/404.html'

@@ -98,50 +98,52 @@ angular.module('app.directives', [])
     .directive('mListUnstyled', [function() {
         return {
             restrict: 'C',
-            link: function($scope, element, attrs) {
+            link: function($scope, element, attrs, $state) {
                 console.log('menu list item');
                 console.log(element);
                 var svgElmts = [];
-                var SVGNS = "http://www.w3.org/2000/svg";
-                var rect1 = document.getElementById('rect1');
-                var rect2 = document.getElementById('rect2');
-
-                if (!rect1.firstChild) {
-                    console.log('if');
-                    var animate = document.createElementNS(SVGNS, 'animate');
-                    animate.setAttribute('attributeName','x');
-                    animate.setAttribute('from','10');
-                    animate.setAttribute('to','0');
-                    animate.setAttribute('dur','.5s');
-                    animate.setAttribute('fill','freeze');
-                    animate.setAttribute('calcMode', 'spline');
-                    animate.setAttribute('keySplines', '0.42 0 0.58 1');
-                    animate.setAttribute('keyTimes', '0;1');
-                    animate.setAttribute('begin', 'click');
-                    rect1.appendChild(animate);
-                } else {
-                    console.log('else');
-                    animate = rect1.firstChild;
-                }
-                svgElmts.push(animate);
-                if (!rect2.firstChild) {
-                    console.log('if');
-                    var animate = document.createElementNS(SVGNS, 'animate');
-                    animate.setAttribute('attributeName','x');
-                    animate.setAttribute('from','5');
-                    animate.setAttribute('to','0');
-                    animate.setAttribute('dur','.5s');
-                    animate.setAttribute('fill','freeze');
-                    animate.setAttribute('calcMode', 'spline');
-                    animate.setAttribute('keySplines', '0.42 0 0.58 1');
-                    animate.setAttribute('keyTimes', '0;1');
-                    animate.setAttribute('begin', 'click');
-                    rect2.appendChild(animate);
-                } else {
-                    console.log('else');
-                    animate = rect2.firstChild;
-                }
-                svgElmts.push(animate);
+//                var SVGNS = "http://www.w3.org/2000/svg";
+//                var rect1 = document.getElementById('rect1');
+//                var rect2 = document.getElementById('rect2');
+//
+//                if (!rect1.firstChild) {
+//                    console.log('if');
+//                    var animate = document.createElementNS(SVGNS, 'animate');
+//                    animate.setAttribute('attributeName','x');
+//                    animate.setAttribute('from','10');
+//                    animate.setAttribute('to','0');
+//                    animate.setAttribute('dur','.5s');
+//                    animate.setAttribute('fill','freeze');
+//                    animate.setAttribute('calcMode', 'spline');
+//                    animate.setAttribute('keySplines', '0.42 0 0.58 1');
+//                    animate.setAttribute('keyTimes', '0;1');
+//                    animate.setAttribute('begin', 'click');
+//                    rect1.appendChild(animate);
+//                } else {
+//                    console.log('else');
+//                    animate = rect1.firstChild;
+//                }
+//                svgElmts.push(animate);
+//                if (!rect2.firstChild) {
+//                    console.log('if');
+//                    var animate = document.createElementNS(SVGNS, 'animate');
+//                    animate.setAttribute('attributeName','x');
+//                    animate.setAttribute('from','5');
+//                    animate.setAttribute('to','0');
+//                    animate.setAttribute('dur','.5s');
+//                    animate.setAttribute('fill','freeze');
+//                    animate.setAttribute('calcMode', 'spline');
+//                    animate.setAttribute('keySplines', '0.42 0 0.58 1');
+//                    animate.setAttribute('keyTimes', '0;1');
+//                    animate.setAttribute('begin', 'click');
+//                    rect2.appendChild(animate);
+//                } else {
+//                    console.log('else');
+//                    animate = rect2.firstChild;
+//                }
+//                svgElmts.push(animate);
+                svgElmts.push(document.getElementById('rect1').firstChild);
+                svgElmts.push(document.getElementById('rect2').firstChild);
 
                 element.bind("click", function(){
                     _.each(svgElmts, function(svgElmt){
@@ -154,6 +156,33 @@ angular.module('app.directives', [])
                         svgElmt.setAttribute('from', svgElmt.getAttribute('to'));
                         svgElmt.setAttribute('to', tmp);
                     });
+                });
+            }
+        };
+    }])
+    .directive('mListitemsMobile', ['$state', function($state) {
+        return {
+            restrict: 'C',
+            link: function($scope, element, attrs) {
+                console.log('menu list item');
+                console.log(element);
+
+                element.bind("click", function(){
+                    console.log(element.children(1).text().toLowerCase());
+                    $state.go('/'+element.children(1).text().toLowerCase());
+                });
+            }
+        };
+    }])
+    .directive('mListitemsYears', [function() {
+        return {
+            restrict: 'C',
+            link: function($scope, element, attrs) {
+                console.log('menu list item');
+                console.log(element);
+
+                element.bind("click", function(){
+                    console.log(element.text());
                 });
             }
         };
@@ -189,7 +218,7 @@ angular.module('app.directives', [])
 //            }
 //        }
 //    }])
-    .directive('flipper', [function(){
+    .directive('mFlipper', [function(){
         return {
             restrict: 'C',
             link: function($scope, element, attrs){
@@ -199,10 +228,10 @@ angular.module('app.directives', [])
 //                    $scope.$apply($scope.toggleFlip);
 //                    console.log($scope.toggleFlip);
 //                });
-                var viewPortToggle = false;
+//                var viewPortToggle = false;
                 element.bind('click', function(){
                     angular.element(element).toggleClass('flip');
-                    angular.element(document.querySelectorAll('.flipper')).toggleClass('isHidden');
+                    angular.element(document.querySelectorAll('.m-flipper')).toggleClass('isHidden');
 //                    if(viewPortToggle === false){
 //                        element.css('height', (angular.element(window.screen.height)[0]-50)+'px');
 //                        viewPortToggle = true;
