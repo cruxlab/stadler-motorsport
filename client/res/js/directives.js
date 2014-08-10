@@ -184,9 +184,7 @@ angular.module('app.directives', [])
                     if($scope.$parent.selectedYear.year != $scope.year.year) {
                         $scope.$parent.selectedYear = $scope.year;
                         $scope.$parent.$apply();
-                        console.log('oldYear log');
                         angular.element(document.querySelectorAll('.m-flipper')).toggleClass('flip');
-                        angular.element(document.querySelectorAll('.m-flipper')).toggleClass('isHidden');
                     }
                 });
             }
@@ -233,7 +231,7 @@ angular.module('app.directives', [])
 //                var viewPortToggle = false;
                 element.bind('click', function(){
                     angular.element(element).toggleClass('flip');
-                    angular.element(element).toggleClass('isHidden');
+                    angular.element(document.querySelectorAll('.m-flipper')).toggleClass('isHidden');
 //                    if(viewPortToggle === false){
 //                        element.css('height', (angular.element(window.screen.height)[0]-50)+'px');
 //                        viewPortToggle = true;
