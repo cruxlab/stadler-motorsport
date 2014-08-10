@@ -95,7 +95,7 @@ angular.module('app.directives', [])
             }
         };
     }])
-    .directive('mListUnstyled', [function() {
+    .directive('menuList', [function() {
         return {
             restrict: 'C',
             link: function($scope, element, attrs, $state) {
@@ -178,11 +178,16 @@ angular.module('app.directives', [])
         return {
             restrict: 'C',
             link: function($scope, element, attrs) {
-                console.log('menu list item');
-                console.log(element);
-
+                console.log('year list item');
+                $scope.$parent.selectedYear = {};
                 element.bind("click", function(){
-                    console.log(element.text());
+                    if($scope.$parent.selectedYear.year != $scope.year.year) {
+                        $scope.$parent.selectedYear = $scope.year;
+                        $scope.$parent.$apply();
+                        console.log('oldYear log');
+                        angular.element(document.querySelectorAll('.m-flipper')).toggleClass('flip');
+                        angular.element(document.querySelectorAll('.m-flipper')).toggleClass('isHidden');
+                    }
                 });
             }
         };
@@ -193,31 +198,28 @@ angular.module('app.directives', [])
             link: function($scope, element, attrs){
                 angular.element($window).bind('scroll', function(){
                     console.log(this.pageYOffset);
-                    if(this.pageYOffset >= 50){
-//                    if(this.pageYOffset >= 200){
-                        console.log('scrolled below header');
+                    if($state === '/portfolio' || '/history'){
                         angular.element(document.querySelector('#header')).addClass('isShrinked');
                         angular.element(document.querySelector('.l-content')).addClass('isShrinked');
                         angular.element(document.querySelector('.m-navigation')).addClass('isShrinked');
-//                    } else if(this.pageYOffset <= 50){
-                    } else if(this.pageYOffset <= 50 && $state.current.name === '/'){
-                        console.log('header is in view');
-                        angular.element(document.querySelector('#header')).removeClass('isShrinked');
-                        angular.element(document.querySelector('.l-content')).removeClass('isShrinked');
-                        angular.element(document.querySelector('.m-navigation')).removeClass('isShrinked');
                     }
+                        if (this.pageYOffset >= 50) {
+//                    if(this.pageYOffset >= 200){
+                            console.log('scrolled below header');
+                            angular.element(document.querySelector('#header')).addClass('isShrinked');
+                            angular.element(document.querySelector('.l-content')).addClass('isShrinked');
+                            angular.element(document.querySelector('.m-navigation')).addClass('isShrinked');
+//                    } else if(this.pageYOffset <= 50){
+                        } else if (this.pageYOffset <= 50 && $state.current.name === '/') {
+                            console.log('header is in view');
+                            angular.element(document.querySelector('#header')).removeClass('isShrinked');
+                            angular.element(document.querySelector('.l-content')).removeClass('isShrinked');
+                            angular.element(document.querySelector('.m-navigation')).removeClass('isShrinked');
+                        }
                 })
             }
         }
     }])
-//    .directive('content', [function(){
-//        return {
-//            restrict: 'A',
-//            link: function($scope, element, attrs){
-//                element.css('paddingTop', document.getElementById('header').clientHeight+'px');
-//            }
-//        }
-//    }])
     .directive('mFlipper', [function(){
         return {
             restrict: 'C',
@@ -231,7 +233,7 @@ angular.module('app.directives', [])
 //                var viewPortToggle = false;
                 element.bind('click', function(){
                     angular.element(element).toggleClass('flip');
-                    angular.element(document.querySelectorAll('.m-flipper')).toggleClass('isHidden');
+                    angular.element(element).toggleClass('isHidden');
 //                    if(viewPortToggle === false){
 //                        element.css('height', (angular.element(window.screen.height)[0]-50)+'px');
 //                        viewPortToggle = true;

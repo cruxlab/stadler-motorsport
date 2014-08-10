@@ -43,4 +43,10 @@ angular.module('app.ctrl', [])
     })
     .controller('HistCtrl', function($scope, $log, $http, $location){
         $log.log('HistCtrl invocation');
+        $http.get('/nostalgic').success(function(data){
+            console.log(data);
+            $scope.nostalgic = data;
+        })
+            .error(function(error){
+            });
     });

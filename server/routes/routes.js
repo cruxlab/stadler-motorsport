@@ -5,7 +5,8 @@
 var _           = require('underscore')
     , path      = require('path'),
     navModel    = require('../models/navigation'),
-    featModel   = require('../models/features');
+    featModel   = require('../models/features'),
+    nostModel   = require('../models/nostalgic');
 
 var routes = [
 
@@ -32,6 +33,11 @@ var routes = [
         path: '/features',
         httpMethod: 'GET',
         middleware: [featModel.findAllMenuItems]
+    },
+    {
+        path: '/nostalgic',
+        httpMethod: 'GET',
+        middleware: [nostModel.findAllMenuItems]
     },
     {
         path: '/*',
