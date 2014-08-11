@@ -12,6 +12,12 @@
     width: 0!important;
 }
 
+p {
+    font-size: 0.8em;
+    margin: 0em 1em 0em 1em;
+    padding: 1em 0em 1em 0em;
+}
+
 body {
     font: normal 1em Helvetica, Sans-Serif;
     font-size: 1em;

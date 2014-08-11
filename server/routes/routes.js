@@ -2,7 +2,7 @@
  * Created by infcle on 12.02.14.
  */
 
-var _           = require('underscore')
+var _           = require('lodash')
     , path      = require('path'),
     navModel    = require('../models/navigation'),
     featModel   = require('../models/features'),

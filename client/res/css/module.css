@@ -109,7 +109,7 @@
 
 .m-content-main-item > p {
     text-align: justify;
-    padding: 1em;
+    /*padding: 1em;*/
 }
 
 .m-content-main-item:nth-child(odd) {

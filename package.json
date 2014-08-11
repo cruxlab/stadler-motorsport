@@ -9,6 +9,7 @@
     "express": "3.5.1",
     "jade": "*",
     "underscore": "~1.5.2",
+    "lodash": "*",
     "crypto": "*",
     "mongodb": "*",
     "connect-mongo": "*",
