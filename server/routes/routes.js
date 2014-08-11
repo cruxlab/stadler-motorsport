@@ -6,7 +6,8 @@ var _           = require('lodash')
     , path      = require('path'),
     navModel    = require('../models/navigation'),
     featModel   = require('../models/features'),
-    nostModel   = require('../models/nostalgic');
+    nostModel   = require('../models/nostalgic')
+    newsModel   = require('../models/news');
 
 var routes = [
 
@@ -38,6 +39,11 @@ var routes = [
         path: '/nostalgic',
         httpMethod: 'GET',
         middleware: [nostModel.findAllMenuItems]
+    },
+    {
+        path: '/news',
+        httpMethod: 'GET',
+        middleware: [newsModel.findAllMenuItems]
     },
     {
         path: '/*',

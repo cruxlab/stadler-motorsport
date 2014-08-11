@@ -49,4 +49,13 @@ angular.module('app.ctrl', [])
         })
             .error(function(error){
             });
+    })
+    .controller('NewsCtrl', function($scope, $log, $http, $location){
+        $log.log('NewsCtrl invocation');
+        $http.get('/news').success(function(data){
+            console.log(data);
+            $scope.posts = data;
+        })
+            .error(function(error){
+            });
     });
