@@ -38,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.384615" vertical-offset="544" max-vertical-offset="1207">
-              <caret line="54" column="109" selection-start-line="54" selection-start-column="109" selection-end-line="54" selection-end-column="109" />
+            <state vertical-scroll-proportion="0.76796716" vertical-offset="544" max-vertical-offset="1207">
+              <caret line="54" column="89" selection-start-line="54" selection-start-column="89" selection-end-line="54" selection-end-column="89" />
               <folding />
             </state>
           </provider>
@@ -68,11 +68,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="routes.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/routes/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2651072" vertical-offset="0" max-vertical-offset="2227">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2227">
               <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="news.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/models/news.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -118,16 +128,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="directives.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/res/js/directives.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="301" max-vertical-offset="4284">
-              <caret line="233" column="76" selection-start-line="233" selection-start-column="76" selection-end-line="233" selection-end-column="76" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -163,8 +163,8 @@
         <option value="$PROJECT_DIR$/client/res/partials/history.html" />
         <option value="$PROJECT_DIR$/client/res/partials/aktuell.html" />
         <option value="$PROJECT_DIR$/client/res/css/module.css" />
-        <option value="$PROJECT_DIR$/client/index.html" />
         <option value="$PROJECT_DIR$/server/routes/routes.js" />
+        <option value="$PROJECT_DIR$/client/index.html" />
       </list>
     </option>
   </component>
@@ -755,12 +755,12 @@
       <workItem from="1407742257041" duration="1891000" />
       <workItem from="1407786236031" duration="2272000" />
       <workItem from="1407868877491" duration="638000" />
-      <workItem from="1407869960749" duration="7702000" />
+      <workItem from="1407869960749" duration="8042000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246110000" />
+    <option name="totallyTimeSpent" value="246450000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="146" y="-8" width="1462" height="916" extended-state="6" />
@@ -1129,14 +1129,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/news.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5302144" vertical-offset="0" max-vertical-offset="513">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/res/js/routingConfig.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717">
@@ -1192,14 +1184,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615" vertical-offset="544" max-vertical-offset="1207">
-          <caret line="54" column="109" selection-start-line="54" selection-start-column="109" selection-end-line="54" selection-end-column="109" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/models/navigation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
@@ -1218,8 +1202,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2651072" vertical-offset="0" max-vertical-offset="2227">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2227">
           <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/news.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.76796716" vertical-offset="544" max-vertical-offset="1207">
+          <caret line="54" column="89" selection-start-line="54" selection-start-column="89" selection-end-line="54" selection-end-column="89" />
           <folding />
         </state>
       </provider>
