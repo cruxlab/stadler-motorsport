@@ -47,7 +47,9 @@ angular.module('stadler-motorsport', ['ngAnimate', 'ui.router', 'app.ctrl', 'app
             })
             .state('404', {
                 url: '*path',
-                templateUrl: '/res/partials/404.html'
+                views: {
+                    'content-ui': {templateUrl: '/res/partials/404.html'}
+                }
             })
         ;
 
