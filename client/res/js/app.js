@@ -22,6 +22,12 @@ angular.module('stadler-motorsport', ['ngAnimate', 'ui.router', 'app.ctrl', 'app
 //                                     controller: 'NavCtrl'}
                 }
             })
+            .state('/home',{
+                url: '/',
+                views: {
+                    'content-ui': {templateUrl: '/res/partials/main.html'}
+                }
+            })
             .state('/portfolio',{
                 url: '/portfolio',
                 views: {

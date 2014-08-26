@@ -13,29 +13,14 @@
 }
 
 html {
-    /*background: url(../img/medium.jpg) no-repeat center center fixed;*/
-    /*background: rgb(255,255,250);*/
-    /*background: rgba(255,255,250,1);*/
-    /*-webkit-background-size: cover;*/
-    /*-moz-background-size: cover;*/
-    /*-o-background-size: cover;*/
-    /*background-size: cover;*/
+    background: url(../img/street.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body {
-    /*background: url(../img/street.png) fixed;*/
-    /*background: url(../img/porsche-logo.jpg) no-repeat fixed;*/
-    background: rgb(255,66,66);
-    /*background: rgba(250,0,0,0.7);*/
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    /*background-image: url(../img/street.png);*/
-    /*background-attachment: fixed;*/
-    /*background-repeat: repeat-y;*/
-    /*background-position: 50%;*/
-    /*background-size: cover;*/
     font: normal 1em Helvetica, Sans-Serif;
     font-size: 1em;
     padding: 0;
@@ -64,8 +49,6 @@ header {
     -ms-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
-
-    /*background: rgb(255, 0, 0);*/
 }
 
 footer {
@@ -83,14 +66,7 @@ footer {
 
 .l-content {
     /*padding-top: 216px;*/
-    /*padding-top: 55px;*/
-    overflow-x: hidden;
-}
-.l-services {
-
-}
-.l-services-content {
-
+    padding-top: 55px;
 }
 .clearfix:before,
 .clearfix:after {
@@ -103,4 +79,34 @@ footer {
 
 .clearfix {
     zoom: 1;
+}
+
+.l-features {
+    /*height: 480px;*/
+}
+
+.l-history {
+    height: 535px;
+}
+
+.l-history-container {
+    float: left;
+    height: inherit;
+}
+
+/*#logo {*/
+    /*width: 100%;*/
+    /*display: block;*/
+/*}*/
+@media (min-width: 1025px) and (orientation: landscape) {
+    .container {
+        width: 100%;
+    }
+    /*header {*/
+        /*background: rgb(255, 0, 0);*/
+        /*background: rgba(255, 0, 0, 0.7);*/
+    /*}*/
+    .l-content {
+        padding-top: 200px;
+    }
 }
