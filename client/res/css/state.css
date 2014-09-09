@@ -5,6 +5,9 @@
     -ms-filter: blur(13px);
     filter: blur(13px);
 }
+.l-services-wrap.isVisible{
+    left: -360px;
+}
 .m-service:nth-child(odd).isVisible{
     left: 0px;
 }

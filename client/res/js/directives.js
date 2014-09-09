@@ -98,14 +98,58 @@ angular.module('app.directives', [])
             }
         }
     }])
-    .directive('mSvgService', [function () {
+    .directive('header', ['$window', function ($window) {
+        return {
+            restrict: 'C',
+            link: function (scope, element, attrs) {
+                angular.element($window).bind('scroll', function ($window) {
+                        console.log('lower ');
+                        angular.element(document.querySelector('.header')).css({'opacity':pageYOffset/500});
+                })
+            }
+        }
+    }])
+    /*.directive('lServicesWrap', ['$window', function ($window) {
+        return {
+            restrict: 'C',
+            link: function (scope, element, attrs) {
+                console.log('l-services-wrap');
+                var factor = 0;
+                if($window.innerWidth == 360){
+                    factor = 2;
+                }
+                angular.element(document.querySelector('.l-services-content')).css({'height':((document.getElementsByClassName('m-service')).length*180)/factor+'px'});
+            }
+        }
+    }])*/
+    .directive('mSvgService', ['$window', function ($window) {
         return {
             restrict: 'A',
             link: function (scope, element, attrs) {
                 console.log('SVG');
+                var toggleServiceContent = false;
+                var factor = 0;
+                if($window.innerWidth == 360){
+                    factor = 2;
+                }
+                var defHeightContent = angular.element(document.querySelector('.l-services-content').clientHeight)[0];
+                var minHeightContent = (document.getElementsByClassName('m-service').length*180)/factor;
+                console.log(defHeightContent);
+                console.log(minHeightContent);
+                angular.element(document.querySelector('.l-services-content')).css({'height':minHeightContent+'px'});
                 element.bind('click', function () {
-                    element.append('<section></section>');
                     console.log('click');
+                    toggleServiceContent = !toggleServiceContent;
+                    angular.element(document.querySelector('.l-services-wrap')).toggleClass('isVisible');
+                    if(toggleServiceContent === true){
+//                        angular.element(document.querySelector('.l-services-content')).css({'left': '-'+window.innerWidth+'px'});
+//                        angular.element(document.querySelector('.l-services-wrap')).css({'height':'1000px'});
+                        angular.element(document.querySelector('.l-services-content')).css({'height':defHeightContent+'px'});
+                    } else {
+//                        angular.element(document.querySelector('.l-services-wrap')).css({'height':'720px'});
+//                        angular.element(document.querySelector('.l-services-content')).css({'left': '0px'});
+                        angular.element(document.querySelector('.l-services-content')).css({'height':minHeightContent+'px'});
+                    }
                 })
             }
         }

@@ -2,17 +2,13 @@
 .m-main-picture {
     width: 100%;
     height: 50%;
-    background: rgb(255,0,0);
 }
 .m-main-picture > img {
     width: 100%;
-    height: 293;
-}
-.m-content-main-item {
-    /*background: transparent;*/
+    height: 293px;
 }
 /*p {*/
-    .m-content-main-item > p {
+.m-content-main-item > p {
     text-align: justify;
     padding: 1em;
     color: rgb(255, 0, 0);
@@ -21,9 +17,12 @@
     background: rgba(255, 255, 250, 1);
 }
 /*h2 {*/
-.m-content-main-item > h2 {
+.m-content-main-item > h2:nth-child(odd) {
     text-align: right;
-    padding-top: 15px;
+    padding-bottom: 10px;
+}
+.m-content-main-item > h2:nth-child(even) {
+    text-align: left;
     padding-bottom: 10px;
 }
 /*h2 > span {*/
@@ -99,6 +98,41 @@ background: rgba(255, 255, 250, 1);
     background: rgba(255, 255, 250, 1);
     padding: 10px;
 }
+.m-team-item {
+    width: 100%;
+    background: rgb(255, 255, 250);
+    background: rgba(255, 255, 250, 1);
+    float: left;
+    display: block;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.m-team-item > h2 {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+.m-team-item > h2 > span {
+    color: rgb(255, 0, 0);
+    color: rgba(255, 0, 0, 0.7);
+    font: normal 24px/45px Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    background: rgb(255, 255, 250); /* fallback color */
+    background: rgba(255, 255, 250, 1);
+    padding: 10px;
+}
+.m-team-item > img {
+    position: relative;
+    left: 10%;
+    width: 80%;
+    padding: 1rem 1rem 1rem 1rem;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+
+ }
 .m-footer {
     color: rgb(255, 0, 0);
     color: rgba(255, 0, 0, 0.7);

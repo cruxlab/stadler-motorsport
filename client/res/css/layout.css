@@ -57,8 +57,9 @@ header {
     /*height: 216px;*/
     width: 100%;
     /*overflow-y: hidden;*/
-    /*background: rgb(114, 114, 114); *//* fallback color */
+    background: rgb(114, 114, 114);/* fallback color */
     /*background: rgba(114, 114, 114, 1);*/
+    opacity: 0;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -86,11 +87,39 @@ footer {
     /*padding-top: 55px;*/
     overflow-x: hidden;
 }
-.l-services {
+.l-services-wrap{
+    position: relative;
+    left: 0px;
+    width: 720px;
+    /*height: 900px;*/
+    overflow: hidden;
 
+    -webkit-transition: all 0.2s .2s;
+    -moz-transition: all 0.2s .2s;
+    -ms-transition: all 0.2s .2s;
+    -o-transition: all 0.2s .2s;
+    transition: all 0.2s .2s;
+}
+.l-services {
+    position: relative;
+    float: left;
+    width: 50%;
 }
 .l-services-content {
+    position: relative;
+    float: left;
+    width: 50%;
+    /*height: inherit;*/
+    /*height: 720px;*/
 
+    background: rgb(255, 255, 250); /* fallback color */
+    background: rgba(255, 255, 250, 1);
+
+    -webkit-transition: all 2s 0.1s;
+    -moz-transition: all 2s 0.1s;
+    -ms-transition: all 2s 0.1s;
+    -o-transition: all 2s 0.1s;
+    transition: all 2s 0.1s;
 }
 .clearfix:before,
 .clearfix:after {
