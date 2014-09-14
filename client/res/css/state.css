@@ -4,7 +4,7 @@
     -o-filter: blur(13px);
     -ms-filter: blur(13px);
     filter: blur(13px);
-}
+}/*
 .l-services-wrap.isVisible{
     left: -360px;
 }
@@ -13,8 +13,20 @@
 }
 .m-service:nth-child(even).isVisible{
     right: 0px;
+}*/
+header.isVisible{
+    height: 55px;
 }
-
+.m-service.isVisible{
+    -webkit-transform: rotateX(0deg); /* Chrome, Safari, Opera  */
+    transform: rotateX(0deg);
+    top: 0px;
+}
+.m-team-item.isVisible{
+    -webkit-transform: rotateX(0deg); /* Chrome, Safari, Opera  */
+    transform: rotateX(0deg);
+    top: 0px;
+}
 .m-footer.isVisible{
     background: rgba(255,255,250,1);
     height: 80px;

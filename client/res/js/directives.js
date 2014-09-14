@@ -71,7 +71,7 @@ angular.module('app.directives', [])
             }
         };
     }])
-    .directive('mMainPicture', [function () {
+/*    .directive('mMainPicture', [function () {
         return {
             restrict: 'C',
             link: function ($scope, element, attrs) {
@@ -81,14 +81,13 @@ angular.module('app.directives', [])
 //                element.css('height', (window.screen.height - 55) / 2 + 'px');
             }
         }
-    }])
+    }])*/
     .directive('mService', ['$window', function ($window) {
         return {
             restrict: 'C',
             link: function (scope, element, attrs) {
                 console.log('ticker');
                 angular.element($window).bind('scroll', function () {
-                    console.log('scrolled');
                     if (element[0].getBoundingClientRect().top < window.innerHeight) {
                         element.addClass('isVisible');
                     } else {
@@ -103,8 +102,13 @@ angular.module('app.directives', [])
             restrict: 'C',
             link: function (scope, element, attrs) {
                 angular.element($window).bind('scroll', function ($window) {
-                        console.log('lower ');
-                        angular.element(document.querySelector('.header')).css({'opacity':pageYOffset/500});
+//                        console.log('lower ');
+//                        angular.element(document.querySelector('.header')).css({'opacity':pageYOffset/500});
+                    if(this.pageYOffset >250){
+                        element.addClass('isVisible');
+                    } else {
+                        element.removeClass('isVisible');
+                    }
                 })
             }
         }
@@ -121,7 +125,7 @@ angular.module('app.directives', [])
                 angular.element(document.querySelector('.l-services-content')).css({'height':((document.getElementsByClassName('m-service')).length*180)/factor+'px'});
             }
         }
-    }])*/
+    }])*//*
     .directive('mSvgService', ['$window', function ($window) {
         return {
             restrict: 'A',
@@ -132,11 +136,11 @@ angular.module('app.directives', [])
                 if($window.innerWidth == 360){
                     factor = 2;
                 }
-                var defHeightContent = angular.element(document.querySelector('.l-services-content').clientHeight)[0];
-                var minHeightContent = (document.getElementsByClassName('m-service').length*180)/factor;
-                console.log(defHeightContent);
-                console.log(minHeightContent);
-                angular.element(document.querySelector('.l-services-content')).css({'height':minHeightContent+'px'});
+//                var defHeightContent = angular.element(document.querySelector('.l-services-content').clientHeight)[0];
+//                var minHeightContent = (document.getElementsByClassName('m-service').length*180)/factor;
+//                console.log(defHeightContent);
+//                console.log(minHeightContent);
+//                angular.element(document.querySelector('.l-services-content')).css({'height':minHeightContent+'px'});
                 element.bind('click', function () {
                     console.log('click');
                     toggleServiceContent = !toggleServiceContent;
@@ -144,13 +148,48 @@ angular.module('app.directives', [])
                     if(toggleServiceContent === true){
 //                        angular.element(document.querySelector('.l-services-content')).css({'left': '-'+window.innerWidth+'px'});
 //                        angular.element(document.querySelector('.l-services-wrap')).css({'height':'1000px'});
-                        angular.element(document.querySelector('.l-services-content')).css({'height':defHeightContent+'px'});
+//                        angular.element(document.querySelector('.l-services-content')).css({'height':defHeightContent+'px'});
                     } else {
 //                        angular.element(document.querySelector('.l-services-wrap')).css({'height':'720px'});
 //                        angular.element(document.querySelector('.l-services-content')).css({'left': '0px'});
-                        angular.element(document.querySelector('.l-services-content')).css({'height':minHeightContent+'px'});
+//                        angular.element(document.querySelector('.l-services-content')).css({'height':minHeightContent+'px'});
                     }
                 })
+            }
+        }
+    }])*/
+    .directive('mPerspective', [function () {
+        return {
+            restrict: 'C',
+            link: function (scope, element, attrs) {
+                console.log('mTeamItemWrap');
+                console.log('innerWidth '+window.innerWidth);
+                element.css({'-webkit-perspective':window.innerWidth+'px', 'perspective':window.innerWidth+'px'})
+            }
+        }
+    }])
+    .directive('mTeamItem', ['$window', function ($window) {
+        return {
+            restrict: 'C',
+            link: function (scope, element, attrs) {
+                angular.element($window).bind('scroll', function () {
+                    if (element[0].getBoundingClientRect().top < window.innerHeight) {
+                        element.addClass('isVisible');
+                    } else {
+                        element.removeClass('isVisible');
+                    }
+                })
+            }
+        }
+    }])
+    .directive('mapbox', [function(){
+        return {
+            restrict: 'C',
+            link: function(scope, element, attrs){
+                // Provide your access token
+                L.mapbox.accessToken = 'pk.eyJ1IjoiY3J1eGxhYiIsImEiOiItNnNvci1NIn0.OtlkvblVC5-XywffKJfUfg';
+                // Create a map in the div #map
+                L.mapbox.map('map', 'cruxlab.jf0a8fkh');
             }
         }
     }])
@@ -158,9 +197,7 @@ angular.module('app.directives', [])
         return {
             restrict: 'C',
             link: function (scope, element, attrs) {
-                console.log('ticker');
                 angular.element($window).bind('scroll', function () {
-                    console.log('scrolled');
                     if (element[0].getBoundingClientRect().top < window.innerHeight) {
                         element.addClass('isVisible');
                     } else {
