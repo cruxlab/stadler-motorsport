@@ -27,7 +27,12 @@ header.isVisible{
     transform: rotateX(0deg);
     top: 0px;
 }
-.m-footer.isVisible{
-    background: rgba(255,255,250,1);
-    height: 80px;
+footer.isVisible{
+    bottom: 0px;
+}
+
+@media (min-width: 1025px) and (orientation: landscape) {
+    header.isVisible{
+        height: 100px;
+    }
 }

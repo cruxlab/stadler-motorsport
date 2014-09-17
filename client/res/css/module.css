@@ -1,8 +1,12 @@
 
 .m-main-picture {
-    width: 140%;
-    padding-bottom: 1rem;
-    /*height: 50%;*/
+    width: 100%;
+    margin-bottom: 1rem;
+    background-image: url(../img/welcome-small.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-filter: grayscale(1);
 }
 .m-main-picture > img {
     width: 100%;
@@ -21,14 +25,7 @@
     background: rgba(255, 255, 250, 1);
 }
 /*h2 {*/
-.m-content-main-item > h2:nth-child(odd) {
-    text-align: right;
-    padding-bottom: 10px;
-}
-.m-content-main-item > h2:nth-child(even) {
-    text-align: left;
-    padding-bottom: 10px;
-}
+
 /*h2 > span {*/
 .m-content-main-item > h2 > span {
     color: rgb(255, 0, 0);
@@ -38,6 +35,14 @@
     background: rgb(255, 255, 250); /* fallback color */
     background: rgba(255, 255, 250, 1);
     padding: 10px;
+}
+.m-content-main-item:nth-child(odd) > h2 {
+    text-align: right;
+    padding-bottom: 10px;
+}
+.m-content-main-item:nth-child(even) > h2 {
+    text-align: left;
+    padding-bottom: 10px;
 }
 .m-svg-cross {
     width: 100%;
@@ -129,7 +134,7 @@ background: rgba(255, 255, 250, 1);
     padding: 10px;
 }*/
 .m-team-item-wrap{
-    width: inherit;
+    width: 100%;
 }
 .m-perspective{
     float: left;
@@ -171,18 +176,37 @@ background: rgba(255, 255, 250, 1);
     border-radius: 50%;
  }
 .m-footer {
-    color: rgb(255, 0, 0);
-    color: rgba(255, 0, 0, 0.7);
-    background: rgb(255,255,250);
-    background: rgba(255,255,250, 0);
-    height: 80px;
-    -webkit-transition: all 2s 0.2s;
-    -moz-transition: all 2s 0.2s;
-    -ms-transition: all 2s 0.2s;
-    -o-transition: all 2s 0.2s;
-    transition: all 2s 0.2s;
+    color: rgb(128, 128, 128);
+    color: rgba(128, 128, 128, 1);
+    background: rgb(128, 128, 128);
+    background: rgba(128, 128, 128,1);
+
+    -webkit-transition: all 1s 0s;
+    -moz-transition: all 1s 0s;
+    -ms-transition: all 1s 0s;
+    -o-transition: all 1s 0s;
+    transition: all 1s 0s;
+
 }
-.m-svg-location {
-    fill:rgb(255, 0, 0);
-    fill:rgba(255, 0, 0, 0.7);
+.m-svg-contact {
+    fill: rgb(66, 66, 66);
+    fill: rgba(66, 66, 66, 1);
+    position: relative;
+    left: 38%;
+    top: -40px;
+}
+
+@media (min-width: 1025px) and (orientation: landscape)  {
+    .m-main-picture{
+        background-image: url(../img/welcome.png);
+    }
+    .m-content-main-item {
+        width: 65%;
+        margin: 0 auto;
+    }
+    .m-perspective {
+        float: left;
+        width: 33%;
+    }
+    
 }

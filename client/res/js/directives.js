@@ -71,7 +71,7 @@ angular.module('app.directives', [])
             }
         };
     }])
-/*    .directive('mMainPicture', [function () {
+   .directive('mMainPicture', [function () {
         return {
             restrict: 'C',
             link: function ($scope, element, attrs) {
@@ -81,7 +81,7 @@ angular.module('app.directives', [])
 //                element.css('height', (window.screen.height - 55) / 2 + 'px');
             }
         }
-    }])*/
+    }])
     .directive('mService', ['$window', function ($window) {
         return {
             restrict: 'C',
@@ -162,8 +162,8 @@ angular.module('app.directives', [])
         return {
             restrict: 'C',
             link: function (scope, element, attrs) {
-                console.log('mTeamItemWrap');
-                console.log('innerWidth '+window.innerWidth);
+//                console.log('mTeamItemWrap');
+//                console.log('innerWidth '+window.innerWidth);
                 element.css({'-webkit-perspective':window.innerWidth+'px', 'perspective':window.innerWidth+'px'})
             }
         }
@@ -193,16 +193,13 @@ angular.module('app.directives', [])
             }
         }
     }])
-    .directive('mFooter', ['$window', function ($window) {
+    .directive('mSvgContact', [function () {
         return {
-            restrict: 'C',
+            restrict: 'A',
             link: function (scope, element, attrs) {
-                angular.element($window).bind('scroll', function () {
-                    if (element[0].getBoundingClientRect().top < window.innerHeight) {
-                        element.addClass('isVisible');
-                    } else {
-                        element.removeClass('isVisible');
-                    }
+            console.log('contact');
+            element.bind('click', function () {
+                    angular.element(document.querySelector('.m-footer')).toggleClass('isVisible');
                 })
             }
         }
