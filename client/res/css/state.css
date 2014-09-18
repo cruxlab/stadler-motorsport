@@ -27,6 +27,14 @@ header.isVisible{
     transform: rotateX(0deg);
     top: 0px;
 }
+.m-svg-cross.red{
+    fill: rgb(255, 66, 66); /* fallback color */
+    fill: rgba(255, 66, 66, 1);
+}
+.m-svg-cross.white{
+    fill: rgb(255, 255, 250); /* fallback color */
+    fill: rgba(255, 255, 250, 1);
+}
 footer.isVisible{
     bottom: 0px;
 }

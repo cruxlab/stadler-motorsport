@@ -15,8 +15,9 @@
 /*p {*/
 .m-content-main-item{
     width: 100%;
+    padding-top: 1rem;
 }
-.m-content-main-item > p {
+.m-content-main-item .m-content-main-item-wrap > p {
     text-align: justify;
     padding: 1em;
     color: rgb(255, 0, 0);
@@ -27,7 +28,7 @@
 /*h2 {*/
 
 /*h2 > span {*/
-.m-content-main-item > h2 > span {
+.m-content-main-item .m-content-main-item-wrap > h2 > span {
     color: rgb(255, 0, 0);
     color: rgba(255, 0, 0, 0.7);
     font: normal 24px/45px Helvetica, Sans-Serif;
@@ -35,20 +36,29 @@
     background: rgb(255, 255, 250); /* fallback color */
     background: rgba(255, 255, 250, 1);
     padding: 10px;
+    -moz-box-shadow:0 2px 2px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.75);
 }
-.m-content-main-item:nth-child(odd) > h2 {
+.m-content-main-item:nth-child(odd){
+    background: rgb(255,66,66);
+    background: rgba(255,66,66,1);
+}
+.m-content-main-item:nth-child(even){
+    background: rgb(255,255,250);
+    background: rgba(255,255,250,1);
+}
+.m-content-main-item:nth-child(odd) .m-content-main-item-wrap> h2 {
     text-align: right;
     padding-bottom: 10px;
 }
-.m-content-main-item:nth-child(even) > h2 {
+.m-content-main-item:nth-child(even) .m-content-main-item-wrap > h2 {
     text-align: left;
     padding-bottom: 10px;
 }
 .m-svg-cross {
     width: 100%;
     height: 50px;
-    fill: rgb(255, 255, 250); /* fallback color */
-    fill: rgba(255, 255, 250, 1);
     margin: 2rem 0rem 2rem 0rem;
 }
 .m-svg-service {
@@ -200,13 +210,17 @@ background: rgba(255, 255, 250, 1);
     .m-main-picture{
         background-image: url(../img/welcome.png);
     }
-    .m-content-main-item {
-        width: 65%;
-        margin: 0 auto;
-    }
     .m-perspective {
         float: left;
-        width: 33%;
+        width: 33.3%;
+    }
+    .m-content-main-item-wrap{
+        width: 65%;
+        margin:0 auto;
+    }
+
+    #extending-line{
+        width: 400px;
     }
     
 }

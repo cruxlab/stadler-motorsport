@@ -193,6 +193,15 @@ angular.module('app.directives', [])
             }
         }
     }])
+    .directive('mSvgCrossLineLeft', [function () {
+        return {
+            restrict: 'A',
+            link: function (scope, element, attrs) {
+            console.log('crossline');
+            element.attr({'x':'-200%'});
+            }
+        }
+    }])
     .directive('mSvgContact', [function () {
         return {
             restrict: 'A',
