@@ -17,9 +17,8 @@ angular.module('stadler-motorsport', ['ngAnimate', 'ui.router', 'app.ctrl', 'app
             .state('/', {
                 url: '/',
                 views: {
-                    'content-ui':   {templateUrl: '/res/partials/main.html'}
-//                    'header-ui':    {templateUrl: '/res/partials/navigation.html',
-//                                     controller: 'NavCtrl'}
+                    'content-ui':   {templateUrl: '/res/partials/main.html'},
+                    'address-ui':    {templateUrl: '/res/partials/address.html'}
                 }
             })
             .state('/home',{

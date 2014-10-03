@@ -20,6 +20,9 @@ html {
     /*-moz-background-size: cover;*/
     /*-o-background-size: cover;*/
     /*background-size: cover;*/
+
+    color: rgb(255, 0, 0);
+    color: rgba(255, 0, 0, 0.7);
 }
 
 body {
@@ -42,6 +45,11 @@ body {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 p {
     font-size: 0.8em;
     /*margin: 0em 1em 0em 1em;*/
@@ -51,16 +59,14 @@ p {
 header {
     /*border: dotted #000000;*/
     /*border-width: 1px;*/
-    position: fixed;
+    /*position: fixed;*/
     z-index: 1000;
     height: 0px;
     /*height: 216px;*/
     width: 100%;
     /*overflow-y: hidden;*/
-    background: rgb(255,66,66);/* fallback color */
-    background: rgba(255,66,66,1);
-
-    -webkit-box-shadow: 0px 0px 20px rgba(0,0,0,0.75) ;
+    background: rgb(255,255,250);/* fallback color */
+    background: rgba(255,255,250,1);
 
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -72,9 +78,11 @@ header {
 
 footer {
     position: fixed;
-    bottom: -220px;
-    height: 220px;
+    bottom: 0px;
+    height: 100px;
     width: 100%;
+    background: rgb(255,255,250);/* fallback color */
+    background: rgba(255,255,250,1);
 }
 
 #map {
@@ -83,7 +91,6 @@ footer {
 }
 
 .container {
-    /*max-width: 1125px;*/
     margin: 0 auto;
     overflow: hidden;
     overflow-x: auto;
@@ -92,8 +99,9 @@ footer {
 }
 
 .l-content {
-    /*padding-top: 216px;*/
-    /*padding-top: 55px;*/
+    max-width: 1125px;
+    margin: 0 auto;
+    padding-top: 55px;
     overflow-x: hidden;
 }
 .l-services-wrap{
@@ -145,12 +153,18 @@ footer {
 }
 
 @media (min-width: 1025px) and (orientation: landscape) {
-    * {
-        -ms-overflow-style: scrollbar;
-        overflow: -moz-scrollbars;
+    header{
+        height: 100px;
+    }
+    html {
+        background: url(../img/welcome-grayscale.png) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
     }
 
-    *::-webkit-scrollbar {
-        width: 5px!important;
+    footer {
+        height: 100px;
     }
 }

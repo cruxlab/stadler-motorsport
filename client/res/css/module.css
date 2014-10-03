@@ -1,29 +1,18 @@
+.m-address-ui{
+    height: inherit;
+}
+.m-address{
 
-.m-main-picture {
-    width: 100%;
-    margin-bottom: 1rem;
-    background-image: url(../img/welcome-small.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    -webkit-filter: grayscale(1);
 }
-.m-main-picture > img {
-    width: 100%;
-    /*height: 293px;*/
-}
-/*p {*/
 .m-content-main-item{
     width: 100%;
     padding-top: 1rem;
+    background: rgb(255, 255, 250); /* fallback color */
+    background: rgba(255, 255, 250, 1);
 }
 .m-content-main-item .m-content-main-item-wrap > p {
     text-align: justify;
     padding: 1em;
-    color: rgb(255, 0, 0);
-    color: rgba(255, 0, 0, 0.7);
-    background: rgb(255, 255, 250); /* fallback color */
-    background: rgba(255, 255, 250, 1);
 }
 /*h2 {*/
 
@@ -40,14 +29,7 @@
     -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.75);
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.75);
 }
-.m-content-main-item:nth-child(odd){
-    background: rgb(255,66,66);
-    background: rgba(255,66,66,1);
-}
-.m-content-main-item:nth-child(even){
-    background: rgb(255,255,250);
-    background: rgba(255,255,250,1);
-}
+
 .m-content-main-item:nth-child(odd) .m-content-main-item-wrap> h2 {
     text-align: right;
     padding-bottom: 10px;
@@ -56,19 +38,9 @@
     text-align: left;
     padding-bottom: 10px;
 }
-.m-svg-cross {
-    width: 100%;
-    height: 50px;
-    margin: 2rem 0rem 2rem 0rem;
-}
 .m-svg-service {
     float: left;
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-    background:rgb(255, 0, 0);
-    background:rgba(255, 0, 0, 0.7);
-    fill: rgb(255, 255, 250); /* fallback color */
-    fill: rgba(255, 255, 250, 1);
-    -webkit-border-radius: 50%;
 }
 .m-service {
     position: relative;
@@ -186,10 +158,6 @@ background: rgba(255, 255, 250, 1);
     border-radius: 50%;
  }
 .m-footer {
-    color: rgb(128, 128, 128);
-    color: rgba(128, 128, 128, 1);
-    background: rgb(128, 128, 128);
-    background: rgba(128, 128, 128,1);
 
     -webkit-transition: all 1s 0s;
     -moz-transition: all 1s 0s;
@@ -207,9 +175,6 @@ background: rgba(255, 255, 250, 1);
 }
 
 @media (min-width: 1025px) and (orientation: landscape)  {
-    .m-main-picture{
-        background-image: url(../img/welcome.png);
-    }
     .m-perspective {
         float: left;
         width: 33.3%;
@@ -221,6 +186,9 @@ background: rgba(255, 255, 250, 1);
 
     #extending-line{
         width: 400px;
+    }
+    .m-svg-cross{
+        display: none;
     }
     
 }

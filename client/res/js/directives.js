@@ -71,17 +71,6 @@ angular.module('app.directives', [])
             }
         };
     }])
-   .directive('mMainPicture', [function () {
-        return {
-            restrict: 'C',
-            link: function ($scope, element, attrs) {
-                console.log(element);
-                console.log(window.screen.height);
-                element.css('height', (window.screen.height) / 2 + 'px');
-//                element.css('height', (window.screen.height - 55) / 2 + 'px');
-            }
-        }
-    }])
     .directive('mService', ['$window', function ($window) {
         return {
             restrict: 'C',
@@ -189,7 +178,15 @@ angular.module('app.directives', [])
                 // Provide your access token
                 L.mapbox.accessToken = 'pk.eyJ1IjoiY3J1eGxhYiIsImEiOiItNnNvci1NIn0.OtlkvblVC5-XywffKJfUfg';
                 // Create a map in the div #map
-                L.mapbox.map('map', 'cruxlab.jf0a8fkh');
+                var map = L.mapbox.map('map', 'cruxlab.jf0a8fkh');
+                // Disable drag and zoom handlers.
+//                map.dragging.disable();
+                map.touchZoom.disable();
+                map.doubleClickZoom.disable();
+                map.scrollWheelZoom.disable();
+
+// Disable tap handler, if present.
+                if (map.tap) map.tap.disable();
             }
         }
     }])
