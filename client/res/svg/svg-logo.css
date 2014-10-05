@@ -1,0 +1,7 @@
+svg {
+	width: 450px;
+	height: 100px;
+}
+svg > g {
+	transform: scale(0.4);
+}

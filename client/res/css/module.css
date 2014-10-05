@@ -1,56 +1,49 @@
+.m-logo{
+    height: inherit;
+    float: left;
+}
+.m-logo > img {
+    position: relative;
+    top: 25%;
+}
 .m-address-ui{
     height: inherit;
+    float: right;
 }
 .m-address{
-
+    font: normal 0.8rem/1rem Helvetica, Sans-Serif;
+    margin: 0rem 1rem 0rem 1rem;
 }
-.m-content-main-item{
-    width: 100%;
-    padding-top: 1rem;
-    background: rgb(255, 255, 250); /* fallback color */
-    background: rgba(255, 255, 250, 1);
-}
-.m-content-main-item .m-content-main-item-wrap > p {
-    text-align: justify;
-    padding: 1em;
-}
-/*h2 {*/
-
-/*h2 > span {*/
-.m-content-main-item .m-content-main-item-wrap > h2 > span {
-    color: rgb(255, 0, 0);
-    color: rgba(255, 0, 0, 0.7);
-    font: normal 24px/45px Helvetica, Sans-Serif;
+.m-address > h2 > span {
+    background: rgb(255, 0, 0);
+    background: rgba(255, 0, 0, 0.7);
+    font: normal 1.2rem/1.6rem Helvetica, Sans-Serif;
     letter-spacing: -1px;
-    background: rgb(255, 255, 250); /* fallback color */
-    background: rgba(255, 255, 250, 1);
-    padding: 10px;
-    -moz-box-shadow:0 2px 2px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.75);
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.75);
+    color: rgb(255, 255, 250);
+    color: rgba(255, 255, 250, 1);
+    padding: 0 1rem 0 1rem;
 }
-
-.m-content-main-item:nth-child(odd) .m-content-main-item-wrap> h2 {
-    text-align: right;
-    padding-bottom: 10px;
+.m-landing > h1 > span{
+    background: rgb(255, 0, 0);
+    background: rgba(255, 0, 0, 0.7);
+    font: normal 4rem/5rem Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    color: rgb(255, 255, 250);
+    color: rgba(255, 255, 250, 1);
+    padding: 0 1rem 0 1rem;
 }
-.m-content-main-item:nth-child(even) .m-content-main-item-wrap > h2 {
-    text-align: left;
-    padding-bottom: 10px;
+.m-list-unstyled{
+    list-style: none;
+    text-decoration: none;
 }
-.m-svg-service {
-    float: left;
-    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-}
-.m-service {
-    position: relative;
-    top: 50px;
-    width: 100%;
-    height: 180px;
-    background: rgb(255, 255, 250);
-    background: rgba(255, 255, 250, 1);
-    -webkit-transform: rotateX(15deg); /* Chrome, Safari, Opera  */
-    transform: rotateX(15deg);
+.m-navigation h2 > span{
+    background: rgb(255, 0, 0);
+    background: rgba(255, 0, 0, 0.7);
+    font: normal 1.2rem/1.6rem Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    color: rgb(255, 255, 250);
+    color: rgba(255, 255, 250, 1);
+    padding: 0rem 1rem 0rem 1rem;
 
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -58,26 +51,67 @@
     -o-transition: all 0.5s;
     transition: all 0.5s;
 }
-.m-service> h2 {
-    text-align: left;
-    padding-left: 1rem;
+.m-navigation h2 > span:hover{
+    background: rgb(255, 0, 0);
+    background: rgba(255, 0, 0, 0.7);
+    font: normal 1.2rem/5rem Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    color: rgb(255, 255, 250);
+    color: rgba(255, 255, 250, 1);
+    padding: 1rem 1rem 1rem 1rem;
 }
-.m-service > h2 > span {
+.m-content-main-item{
+    width: 100%;
+    padding-top: 1rem;
+}
+.m-content-main-item > p {
+    text-align: justify;
+    padding: 1em;
+}
+/*h2 {*/
+
+/*h2 > span {*/
+.m-content-main-item > h2 > span {
     color: rgb(255, 0, 0);
     color: rgba(255, 0, 0, 0.7);
-    font: normal 16px/40px Helvetica, Sans-Serif;
+    font: normal 24px/45px Helvetica, Sans-Serif;
     letter-spacing: -1px;
     background: rgb(255, 255, 250); /* fallback color */
     background: rgba(255, 255, 250, 1);
-    padding: 8px 8px 8px 0px;
+    padding: 10px;
 }
-.m-service > p {
-    text-align: justify;
-    padding: 0rem 1rem 1rem 1rem;
-    color: rgb(255, 0, 0);
-    color: rgba(255, 0, 0, 0.7);
-    background: rgb(255, 255, 250); /* fallback color */
-    background: rgba(255, 255, 250, 1);
+
+.m-content-main-item > h2 {
+    text-align: left;
+    padding-bottom: 10px;
+}
+.m-svg-object{
+    position: relative;
+    left: 50%;
+}
+.m-service {
+    float: left;
+    width: 30%;
+    height: 180px;
+    margin: 10px 10px 10px 10px;
+   /* border: 1px solid rgba(255, 0, 0, 0.7);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;*/
+}
+.m-service > h2 {
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 0, 0, 0.7);
+    letter-spacing: -1px;
+}
+.m-service > h2 > span{
+    background: rgb(255, 0, 0);
+    background: rgba(255, 0, 0, 0.7);
+    font: normal 1.2rem/1.4rem Helvetica, Sans-Serif;
+    color: rgb(255, 255, 250);
+    color: rgba(255, 255, 250, 1);
 }
 /*.m-service:nth-child(odd) {
     left:-361px;

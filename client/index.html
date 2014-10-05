@@ -35,7 +35,7 @@
 
 </head>
 <body ng-controller="MainCtrl">
-<header class="header" id="header">
+<header class="header clearfix" id="header">
 <!--    <div class="m-navigation">
         <svg menu-icon class="m-menu-icon" id="menu-icon">
             <g>
@@ -45,13 +45,23 @@
             </g>
         </svg>
     </div>-->
+    <div class="m-logo">
+        <img srcset="/res/img/logo.png" alt="My default image">
+    </div>
     <div class="m-address-ui" ui-view="address-ui"></div>
 </header>
 <div class="container">
     <div content id="content-ui" class="l-content" ui-view="content-ui"></div>
-    <div class="footer"></div>
+    <div class="l-navigation">
+        <ul class="m-list-unstyled m-navigation">
+            <li m-navigation-item><h2><span>dienstleistungen</span></h2></li>
+            <li m-navigation-item><h2><span>erfolgsgeschichte</span></h2></li>
+            <li m-navigation-item><h2><span>team</span></h2></li>
+            <li m-navigation-item><h2><span>occasionen</span></h2></li>
+            <li m-navigation-item><h2><span>standort</span></h2></li>
+        </ul>
+    </div>
 </div>
-
 <footer class="m-footer">
 </footer>
 </body>

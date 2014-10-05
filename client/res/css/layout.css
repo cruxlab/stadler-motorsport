@@ -21,8 +21,8 @@ html {
     /*-o-background-size: cover;*/
     /*background-size: cover;*/
 
-    color: rgb(255, 0, 0);
-    color: rgba(255, 0, 0, 0.7);
+/*    color: rgb(255, 0, 0);
+    color: rgba(255, 0, 0, 0.7);*/
 }
 
 body {
@@ -122,6 +122,7 @@ footer {
     position: relative;
     float: left;
     width: 100%;
+    padding: 0% 15% 0% 15%;
 }
 .l-services-content {
     position: relative;
@@ -163,7 +164,12 @@ footer {
         -o-background-size: cover;
         background-size: cover;
     }
-
+    .l-navigation{
+        position: absolute;
+        top: 150px;
+        right: 70px;
+        width: 200px;
+    }
     footer {
         height: 100px;
     }

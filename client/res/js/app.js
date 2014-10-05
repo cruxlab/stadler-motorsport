@@ -17,14 +17,15 @@ angular.module('stadler-motorsport', ['ngAnimate', 'ui.router', 'app.ctrl', 'app
             .state('/', {
                 url: '/',
                 views: {
-                    'content-ui':   {templateUrl: '/res/partials/main.html'},
+                    'content-ui':   {templateUrl: '/res/partials/landing.html'},
                     'address-ui':    {templateUrl: '/res/partials/address.html'}
                 }
             })
-            .state('/home',{
-                url: '/',
+            .state('/dienstleistungen', {
+                url: '/dienstleistungen',
                 views: {
-                    'content-ui': {templateUrl: '/res/partials/main.html'}
+                    'content-ui':   {templateUrl: '/res/partials/services.html'},
+                    'address-ui':    {templateUrl: '/res/partials/address.html'}
                 }
             })
             .state('/portfolio',{

@@ -102,6 +102,20 @@ angular.module('app.directives', [])
             }
         }
     }])
+    .directive('mNavigationItem', ['$state', function($state) {
+        return {
+            restrict: 'A',
+            link: function($scope, element, attrs) {
+                console.log('menu list item');
+                console.log(element);
+
+                element.bind("click", function(){
+                    console.log(element.children(1).text().toLowerCase());
+                    $state.go('/'+element.children(1).text().toLowerCase());
+                });
+            }
+        };
+    }])
     /*.directive('lServicesWrap', ['$window', function ($window) {
         return {
             restrict: 'C',
