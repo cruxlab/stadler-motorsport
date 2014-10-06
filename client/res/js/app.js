@@ -26,22 +26,21 @@ angular.module('stadler-motorsport', ['ngAnimate', 'ui.router', 'app.ctrl', 'app
                 views: {
                     'content-ui':   {templateUrl: '/res/partials/services.html'},
                     'address-ui':    {templateUrl: '/res/partials/address.html'}
+
                 }
             })
-            .state('/portfolio',{
-                url: '/portfolio',
+            .state('/team',{
+                url: '/team',
                 views: {
-                    'content-ui': {templateUrl: '/res/partials/portfolio.html',
-                                   controller: 'FeatCtrl'}
-//                    'header-ui':    {templateUrl: '/res/partials/navigation.html',
-//                        controller: 'NavCtrl'}
+                    'content-ui': {templateUrl: '/res/partials/team.html'},
+                    'address-ui': {templateUrl: '/res/partials/address.html'}
                 }
             })
-            .state('/history',{
-                url: '/history',
+            .state('/standort',{
+                url: '/standort',
                 views: {
-                    'content-ui': {templateUrl: '/res/partials/history.html',
-                                   controller: 'HistCtrl'}
+                    'content-ui': {templateUrl: '/res/partials/map.html'},
+                    'address-ui': {templateUrl: '/res/partials/address.html'}
                 }
             })
             .state('/aktuell',{

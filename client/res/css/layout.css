@@ -86,8 +86,7 @@ footer {
 }
 
 #map {
-    height: 300px;
-    width:100%;
+
 }
 
 .container {
@@ -101,7 +100,6 @@ footer {
 .l-content {
     max-width: 1125px;
     margin: 0 auto;
-    padding-top: 55px;
     overflow-x: hidden;
 }
 .l-services-wrap{

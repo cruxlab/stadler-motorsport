@@ -149,48 +149,51 @@ background: rgba(255, 255, 250, 1);
     background: rgba(255, 255, 250, 1);
     padding: 10px;
 }*/
-.m-team-item-wrap{
+.m-team-wrap{
     width: 100%;
-}
-.m-perspective{
-    float: left;
-    width: inherit;
+    padding: 0% 15% 0% 15%;
 }
 .m-team-item {
+    float: left;
+    width: 20%;
+    overflow: hidden;
+}
+.m-team-item > h2 {
     position: relative;
-    top: 50px;
+    bottom: 0px;
     width: 100%;
-    background: rgb(255, 255, 250);
-    background: rgba(255, 255, 250, 1);
-    -webkit-transform: rotateX(15deg); /* Chrome, Safari, Opera  */
-    transform: rotateX(15deg);
+    text-align: center;
+    padding-bottom: 10px;
+
+    background: rgb(255, 0, 0);
+    background: rgba(255, 0, 0, 0.7);
+    font: normal 1.2rem/2.8rem Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    color: rgb(255, 255, 250); /* fallback color */
+    color: rgba(255, 255, 250, 1);
+    padding: 10px;
+
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -ms-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
 }
-.m-team-item > h2 {
-    text-align: center;
-    padding-bottom: 10px;
-}
-.m-team-item > h2 > span {
-    color: rgb(255, 0, 0);
-    color: rgba(255, 0, 0, 0.7);
-    font: normal 24px/45px Helvetica, Sans-Serif;
-    letter-spacing: -1px;
-    background: rgb(255, 255, 250); /* fallback color */
-    background: rgba(255, 255, 250, 1);
-    padding: 10px;
+.m-team-item:hover > h2{
+    bottom: 64px;
 }
 .m-team-item > img {
-    position: relative;
-    left: 24%;
-    width: 50%;
-    margin: 1rem 0rem 0rem 0rem;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
+    width: 100%;
+    display: block;
  }
+.m-map-wrap{
+    width: 100%;
+    padding: 0% 15% 0% 15%;
+}
+.m-mapbox{
+    height: 300px;
+    width:100%;
+}
 .m-footer {
 
     -webkit-transition: all 1s 0s;

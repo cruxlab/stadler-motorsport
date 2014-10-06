@@ -185,7 +185,7 @@ angular.module('app.directives', [])
             }
         }
     }])
-    .directive('mapbox', [function(){
+    .directive('mMapbox', [function(){
         return {
             restrict: 'C',
             link: function(scope, element, attrs){
