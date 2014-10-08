@@ -29,6 +29,13 @@ angular.module('stadler-motorsport', ['ngAnimate', 'ui.router', 'app.ctrl', 'app
 
                 }
             })
+            .state('/erfolgsgeschichte',{
+                url: '/erfolgsgeschichte',
+                views: {
+                    'content-ui': {templateUrl: '/res/partials/success.html'},
+                    'address-ui':    {templateUrl: '/res/partials/address.html'}
+                }
+            })
             .state('/team',{
                 url: '/team',
                 views: {
@@ -41,13 +48,6 @@ angular.module('stadler-motorsport', ['ngAnimate', 'ui.router', 'app.ctrl', 'app
                 views: {
                     'content-ui': {templateUrl: '/res/partials/map.html'},
                     'address-ui': {templateUrl: '/res/partials/address.html'}
-                }
-            })
-            .state('/aktuell',{
-                url: '/aktuell',
-                views: {
-                    'content-ui': {templateUrl: '/res/partials/aktuell.html',
-                                   controller: 'NewsCtrl'}
                 }
             })
             .state('404', {

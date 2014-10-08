@@ -85,9 +85,26 @@
     text-align: left;
     padding-bottom: 10px;
 }
+.m-textspan-fullwidth{
+    width: 100%;
+    float: left;
+}
+.m-textspan-fullwidth > h2{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+
+    background: rgb(255, 0, 0);
+    background: rgba(255, 0, 0, 0.7);
+    font: normal 1.2rem/2.8rem Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    color: rgb(255, 255, 250); /* fallback color */
+    color: rgba(255, 255, 250, 1);
+    padding: 10px;
+}
 .m-svg-object{
     position: relative;
-    left: 50%;
+    left: 35%;
 }
 .m-service {
     float: left;
@@ -100,15 +117,14 @@
     border-radius: 3px;*/
 }
 .m-service > h2 {
+    height: 48px;
     text-align: center;
     margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(255, 0, 0, 0.7);
+    background: rgb(255, 0, 0);
+    background: rgba(255, 0, 0, 0.7);
     letter-spacing: -1px;
 }
 .m-service > h2 > span{
-    background: rgb(255, 0, 0);
-    background: rgba(255, 0, 0, 0.7);
     font: normal 1.2rem/1.4rem Helvetica, Sans-Serif;
     color: rgb(255, 255, 250);
     color: rgba(255, 255, 250, 1);
@@ -154,13 +170,23 @@ background: rgba(255, 255, 250, 1);
     padding: 0% 15% 0% 15%;
 }
 .m-team-item {
+    position: relative;
     float: left;
     width: 20%;
     overflow: hidden;
 }
-.m-team-item > h2 {
-    position: relative;
-    bottom: 0px;
+.m-team-item > span {
+    position: absolute;
+    bottom: -110px;
+    width: 100%;
+
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.m-team-item > span > h2 {
     width: 100%;
     text-align: center;
     padding-bottom: 10px;
@@ -172,26 +198,47 @@ background: rgba(255, 255, 250, 1);
     color: rgb(255, 255, 250); /* fallback color */
     color: rgba(255, 255, 250, 1);
     padding: 10px;
-
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
 }
-.m-team-item:hover > h2{
-    bottom: 64px;
+.m-team-item:hover > span{
+    bottom: 0px;
 }
 .m-team-item > img {
     width: 100%;
     display: block;
  }
+.m-success-wrap{
+    width: 100%;
+    padding: 0% 15% 0% 15%;
+}
+.m-success-item {
+    position: relative;
+    float: left;
+    overflow: hidden;
+}
+.m-success-item > span {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+.m-success-item > span > h2 {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+
+    background: rgb(255, 0, 0);
+    background: rgba(255, 0, 0, 0.7);
+    font: normal 1.2rem/2.8rem Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    color: rgb(255, 255, 250); /* fallback color */
+    color: rgba(255, 255, 250, 1);
+    padding: 10px;
+}
 .m-map-wrap{
     width: 100%;
     padding: 0% 15% 0% 15%;
 }
 .m-mapbox{
-    height: 300px;
+    height: 530px;
     width:100%;
 }
 .m-footer {
