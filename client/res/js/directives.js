@@ -112,6 +112,7 @@ angular.module('app.directives', [])
                 element.bind("click", function(){
                     console.log(element.children(1).text().toLowerCase());
                     $state.go('/'+element.children(1).text().toLowerCase());
+                    $scope.subsite = element.children(1).text().toLowerCase();
                 });
             }
         };
