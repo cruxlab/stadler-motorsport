@@ -31,8 +31,14 @@
     margin: 0rem 1rem 0rem 1rem;
 }
 .m-address > h2 {
-    background: rgb(255, 0, 0);
-    background: rgba(255, 0, 0, 0.7);
+    font: normal 1.2rem/1.6rem Helvetica, Sans-Serif;
+    color: rgb(225, 0, 0);
+    color: rgba(225, 0, 0, 1);
+    margin: 1.5rem 1.5rem 0rem 0rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-color: rgb(255,0,0);
+    border-style: solid;
+    border-width: 1px;
 }
 .m-address > h2 > span {
     font: normal 1.2rem/1.6rem Helvetica, Sans-Serif;
@@ -40,6 +46,15 @@
     color: rgb(255, 255, 250);
     color: rgba(255, 255, 250, 1);
     padding: 0 1rem 0 1rem;
+    background: rgb(255, 0, 0);
+    background: rgba(255, 0, 0, 0.7);
+}
+.m-menu {
+    float: right;
+}
+.m-menu-icon{
+    margin: 1.5rem 0rem 0rem 0rem;
+    fill: rgba(225,0,0,0.7);
 }
 .m-landing > h1 > span{
     background: rgb(255, 0, 0);
@@ -54,14 +69,21 @@
     list-style: none;
     text-decoration: none;
 }
-.m-navigation h2 > span{
-    background: rgb(255, 0, 0);
-    background: rgba(255, 0, 0, 0.7);
-    font: normal 1.2rem/1.6rem Helvetica, Sans-Serif;
-    letter-spacing: -1px;
-    color: rgb(255, 255, 250);
-    color: rgba(255, 255, 250, 1);
-    padding: 0rem 1rem 0rem 1rem;
+.m-perspective{
+    height: inherit;
+    background: rgb(255,255,250);
+    background: rgba(255,255,250,0.5);
+    -webkit-transform: rotateY(-100deg);
+    -moz-transform: rotateY(-100deg);
+    -ms-transform: rotateY(-100deg);
+    -o-transform: rotateY(-100deg);
+    transform: rotateY(-100deg);
+
+    -webkit-transform-origin: 100% 0;
+    -moz-transform-origin: 100% 0;
+    -ms-transform-origin: 100% 0;
+    -o-transform-origin: 100% 0;
+    transform-origin: 100% 0;
 
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -69,14 +91,22 @@
     -o-transition: all 0.5s;
     transition: all 0.5s;
 }
-.m-navigation h2 > span:hover{
-    background: rgb(255, 0, 0);
-    background: rgba(255, 0, 0, 0.7);
-    font: normal 1.2rem/5rem Helvetica, Sans-Serif;
+.m-navigation h2 {
+    font: normal 1.2rem/1.6rem Helvetica, Sans-Serif;
     letter-spacing: -1px;
-    color: rgb(255, 255, 250);
-    color: rgba(255, 255, 250, 1);
-    padding: 1rem 1rem 1rem 1rem;
+    color: rgb(225,0,0);
+    color: rgba(225,0,0,1);
+    line-height: 40px;
+    padding: 0rem 1rem 0rem 1rem;
+}
+.m-navigation li {
+    margin: 20px 0px 0px 0px;
+}
+.m-navigation hr{
+    position: relative;
+    border-color: rgba(225,0,0,1);
+    width: 60%;
+    left: 20%;
 }
 .m-content-main-item{
     width: 100%;
@@ -138,8 +168,8 @@
     height: 48px;
     text-align: center;
     margin-top: 1rem;
-    background: rgb(255, 0, 0);
-    background: rgba(255, 0, 0, 0.7);
+    background: rgb(225, 0, 0);
+    background: rgba(225, 0, 0, 1);
     letter-spacing: -1px;
 }
 .m-service > h2 > span{
@@ -277,10 +307,6 @@ background: rgba(255, 255, 250, 1);
 }
 
 @media (min-width: 1025px) and (orientation: landscape)  {
-    .m-perspective {
-        float: left;
-        width: 33.3%;
-    }
     .m-content-main-item-wrap{
         width: 65%;
         margin:0 auto;

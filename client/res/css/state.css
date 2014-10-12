@@ -17,6 +17,9 @@
 header.isVisible{
     height: 55px;
 }
+.m-perspective.isVisible{
+    transform: rotateY(0deg);
+}
 .m-service.isVisible{
     -webkit-transform: rotateX(0deg); /* Chrome, Safari, Opera  */
     transform: rotateX(0deg);

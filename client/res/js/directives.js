@@ -71,17 +71,14 @@ angular.module('app.directives', [])
             }
         };
     }])
-    .directive('mService', ['$window', function ($window) {
+    .directive('mSvgObject', ['$state', function ($state) {
         return {
             restrict: 'C',
             link: function (scope, element, attrs) {
                 console.log('ticker');
-                angular.element($window).bind('scroll', function () {
-                    if (element[0].getBoundingClientRect().top < window.innerHeight) {
-                        element.addClass('isVisible');
-                    } else {
-                        element.removeClass('isVisible');
-                    }
+                element.bind('click', function () {
+                    console.log('hello');
+                    console.log(element.getAttributeNode('data-name'));
                 })
             }
         }

@@ -1,8 +1,8 @@
 svg {
 	width: 70px;
 	height: 70px;
-	background:rgb(255, 0, 0);
-	background:rgba(255, 0, 0, 0.7);
+	background:rgb(225, 0, 0);
+	background:rgba(225, 0, 0, 1);
 	fill: rgb(255, 255, 250); /* fallback color */
 	fill: rgba(255, 255, 250, 1);
 	-webkit-border-radius: 50%;

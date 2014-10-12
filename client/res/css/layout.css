@@ -69,7 +69,7 @@ header {
     width: 100%;
     /*overflow-y: hidden;*/
     background: rgb(255,255,250);/* fallback color */
-    background: rgba(255,255,250,1);
+    background: rgba(255,255,250,0.7);
 
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -97,6 +97,8 @@ footer {
     overflow: hidden;
     overflow-x: auto;
     height: inherit;
+    background: rgb(255,255,250);
+    background: rgba(255,255,250,0.3);
     /*border: dotted #000000;*/
     /*border-width:   1px;*/
 }
@@ -106,8 +108,6 @@ footer {
     height: 80%;
     margin: 1px auto;
     overflow-x: hidden;
-    background: rgb(255,255,250);/* fallback color */
-    background: rgba(255,255,250,1);
 }
 .l-services-wrap{
     position: relative;
@@ -171,8 +171,11 @@ footer {
     }
     .l-navigation{
         position: absolute;
-        top: 180px;
-        right: 70px;
+        top: 80px;
+        right: 0px;
         width: 200px;
+        height: inherit;
+        -webkit-perspective: 650px; /* Chrome, Safari, Opera */
+        perspective: 650px;
     }
 }
