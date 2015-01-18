@@ -36,6 +36,25 @@ angular.module('stadler-motorsport', ['ngAnimate', 'ui.router', 'app.ctrl', 'app
                     'address-ui':    {templateUrl: '/res/partials/address.html'}
                 }
             })
+            .state('/service',{
+                url: '/service',
+                views: {
+                    'content-ui': {templateUrl: '/res/partials/svc-service.html'},
+                    'address-ui': {templateUrl: '/res/partials/address.html'}
+                }
+            })
+            .state('/service.main',{
+                url: '/main',
+                views: {
+                    'content-sub-ui': {templateUrl: '/res/partials/svc-service-main.html'}
+                }
+            })
+            .state('/service.gallery',{
+                url: '/main',
+                views: {
+                    'content-sub-ui': {templateUrl: '/res/partials/svc-service-gallery.html'}
+                }
+            })
             .state('/team',{
                 url: '/team',
                 views: {

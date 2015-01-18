@@ -17,7 +17,18 @@
 header.isVisible{
     height: 55px;
 }
-.m-perspective.isVisible{
+
+.btn-h2:hover{
+    cursor: pointer;
+    color: rgb(255, 255, 250);
+    color: rgba(255, 255, 250, 1);
+    border-color: rgb(255, 255, 250);
+    border-style: solid;
+    border-width: 1px;
+    background: rgb(225, 0, 0);
+    background: rgba(225, 0, 0, 1);
+}
+.m-navigation-panel.isVisible{
     transform: rotateY(0deg);
 }
 .m-service.isVisible{

@@ -35,7 +35,7 @@
 
 </head>
 <body ng-controller="MainCtrl">
-<header class="header clearfix" id="header">
+<header class="m-header clearfix" id="header">
 <!--    <div class="m-navigation">
         <svg menu-icon class="m-menu-icon" id="menu-icon">
             <g>
@@ -48,7 +48,7 @@
     <div class="m-logo">
         <img srcset="/res/img/logo.png" alt="My default image">
     </div>
-    <div class="m-menu">
+ <!--   <div class="m-menu">
         <svg menu-icon class="m-menu-icon" id="menu-icon" width="35px" height="40px" viewBox="0 0 35 40">
             <g>
                 <rect x="0" y="10" width="32" height="4" id="rect1" class="m-svg-rect"></rect>
@@ -56,24 +56,45 @@
                 <rect x="0" y="26" width="32" height="4" id="rect3" class="m-svg-rect"></rect>
             </g>
         </svg>
+    </div>-->
+    <div class="m-header-menu">
+    <h2 class="btn-menu btn-h2">Menü</h2>
+    <h2 class="btn-h2">Kontakt</h2>
     </div>
-    <div class="m-address-ui" ui-view="address-ui"></div>
+    <div class="m-header-panel">
+        <div class="l-navigation">
+            <div class="m-navigation-panel">
+                <ul class="m-list-unstyled m-navigation clearfix">
+                    <li m-navigation-item><h2><span>dienstleistungen</span></h2></li>
+                    <li m-navigation-item><h2><span>erfolgsgeschichte</span></h2></li>
+                    <li m-navigation-item><h2><span>team</span></h2></li>
+                    <li m-navigation-item><h2><span>occasionen</span></h2></li>
+                    <li m-navigation-item><h2><span>standort</span></h2></li>
+                </ul>
+            </div>
+        </div>
+        <div class="m-address-ui" ui-view="address-ui"></div>
+    </div>
 </header>
 <div class="container">
 
     <!--<div class="m-subsite"><h2><span>{{subsite}}</span></h2></div>-->
-    <div content id="content-ui" class="l-content" ui-view="content-ui"></div>
-    <div class="l-navigation">
-        <div class="m-perspective">
-        <ul class="m-list-unstyled m-navigation">
-            <li m-navigation-item><h2><span>dienstleistungen</span></h2></li>
+    <div class="m-navigation-panel-right">
+        <ul class="m-list-unstyled m-navigation-right clearfix">
+            <li m-navigation-item><h2><span>dienstleistungen</span></h2>
+                <ul class="m-list-unstyled m-navigation-sub clearfix">
+                    <li m-navigation-item><h2><span>service</span></h2>
+                    <li m-navigation-item><h2><span>racing</span></h2>
+                </ul>
+            </li>
             <li m-navigation-item><h2><span>erfolgsgeschichte</span></h2></li>
             <li m-navigation-item><h2><span>team</span></h2></li>
             <li m-navigation-item><h2><span>occasionen</span></h2></li>
             <li m-navigation-item><h2><span>standort</span></h2></li>
         </ul>
-        </div>
     </div>
+    <div content id="content-ui" class="l-content" ui-view="content-ui"></div>
+
 </div>
 <footer class="m-footer">
 </footer>

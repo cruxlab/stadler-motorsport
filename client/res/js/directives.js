@@ -71,11 +71,20 @@ angular.module('app.directives', [])
             }
         };
     }])
+    .directive('btnMenu', [function () {
+        return {
+            restrict: 'C',
+            link: function (scope, element, attrs) {
+                element.bind('click', function () {
+                    angular.element(document.querySelector('.m-navigation-panel')).toggleClass('isVisible');
+                })
+            }
+        }
+    }])
     .directive('mSvgObject', ['$state', function ($state) {
         return {
             restrict: 'C',
             link: function (scope, element, attrs) {
-                console.log('ticker');
                 element.bind('click', function () {
                     console.log('hello');
                     console.log(element.getAttributeNode('data-name'));
@@ -108,8 +117,22 @@ angular.module('app.directives', [])
 
                 element.bind("click", function(){
                     console.log(element.children(1).text().toLowerCase());
-                    $state.go('/'+element.children(1).text().toLowerCase());
+                    $state.go('/'+element.children(1).text().toLowerCase()+'.main');
                     $scope.subsite = element.children(1).text().toLowerCase();
+                });
+            }
+        };
+    }])
+    .directive('btnH2', ['$state', function($state) {
+        return {
+            restrict: 'C',
+            link: function($scope, element, attrs) {
+                console.log('menu list item');
+                console.log(element);
+
+                element.bind("click", function(){
+                    console.log(element.children(1).text().toLowerCase());
+                    $state.go('/service.gallery');
                 });
             }
         };
